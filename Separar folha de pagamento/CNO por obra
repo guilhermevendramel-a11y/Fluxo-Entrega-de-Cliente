@@ -1,0 +1,815 @@
+# ============================================================
+# PREENCHER DIÁRIO DE OBRA COM BASE NA FOLHA DE PAGAMENTO
+# ------------------------------------------------------------
+# O que o script faz:
+# 1. Lê a folha de pagamento em PDF
+# 2. Extrai colaborador, função e CBO
+# 3. Preenche a planilha Excel a partir da linha 3
+# 4. Compara a função com o mês anterior
+# 5. Usa o mesmo CNO/CNPJ da coluna F para funções já existentes
+# 6. Para função nova, usa o CNO ou CNPJ padrão
+# 7. Salva o arquivo final na pasta arquivos_gerados
+# 8. Salva um arquivo debug_texto_extraido.txt para conferência
+# ============================================================
+
+import os
+import re
+import unicodedata
+from copy import copy
+from datetime import datetime
+
+import fitz  # PyMuPDF
+from openpyxl import load_workbook
+
+
+# ============================================================
+# CONFIGURAÇÕES DE PASTAS
+# ============================================================
+
+# Pasta onde este script está salvo
+PASTA_PROJETO = os.path.dirname(os.path.abspath(__file__))
+
+# Pastas internas do projeto
+PASTA_PLANILHA_MODELO = os.path.join(PASTA_PROJETO, "planilha_modelo")
+PASTA_FOLHAS_PAGAMENTO = os.path.join(PASTA_PROJETO, "folhas_pagamento")
+PASTA_ARQUIVOS_GERADOS = os.path.join(PASTA_PROJETO, "arquivos_gerados")
+
+
+# ============================================================
+# NOMES DOS ARQUIVOS
+# ============================================================
+
+# Nome exato da planilha dentro da pasta planilha_modelo
+NOME_PLANILHA_MODELO = "Diário de Obra- Novo Nordisk FFEx MOC  - ATUALIZADO.xlsx"
+
+# Caminhos completos montados automaticamente
+PLANILHA_MODELO = os.path.join(PASTA_PLANILHA_MODELO, NOME_PLANILHA_MODELO)
+
+
+# ============================================================
+# CONFIGURAÇÕES DA PLANILHA
+# ============================================================
+
+# Aba que será preenchida
+ABA_DESTINO = "ABRIL 2026"
+
+# Aba usada como referência do mês anterior
+# Precisa ter função na coluna C e CNO/CNPJ na coluna F
+ABA_MES_ANTERIOR = "MARÇO 2026"
+
+# Linha inicial dos colaboradores
+LINHA_INICIAL = 3
+
+# Nome da obra a preencher na coluna E
+OBRA_ATUAL = "NOVO NORDISK - ELETROMECÂNICA"
+
+# Identificador padrão para funções novas
+# Use "CNO" ou "CNPJ"
+TIPO_IDENTIFICADOR_PADRAO = "CNO"
+
+CNO_PADRAO = "90.020.03790/74"
+CNPJ_PADRAO = "16.921.603/0001-66"
+
+
+# ============================================================
+# COLUNAS DA PLANILHA
+# ============================================================
+
+COL_NOME = "B"
+COL_FUNCAO = "C"
+COL_CBO = "D"
+COL_OBRA = "E"
+COL_CNO_CNPJ = "F"
+
+# Colunas extras para conferência
+COL_REFERENCIA_ANTERIOR = "G"
+COL_STATUS = "H"
+
+
+# ============================================================
+# FUNÇÕES DE PASTAS E VALIDAÇÕES
+# ============================================================
+
+def criar_pastas_necessarias():
+    """
+    Cria as pastas do projeto caso ainda não existam.
+    """
+
+    os.makedirs(PASTA_PLANILHA_MODELO, exist_ok=True)
+    os.makedirs(PASTA_FOLHAS_PAGAMENTO, exist_ok=True)
+    os.makedirs(PASTA_ARQUIVOS_GERADOS, exist_ok=True)
+
+
+def listar_arquivos_da_pasta(pasta):
+    """
+    Lista arquivos disponíveis em uma pasta.
+    Ajuda a identificar erro de nome.
+    """
+
+    if not os.path.exists(pasta):
+        return []
+
+    return [
+        arquivo for arquivo in os.listdir(pasta)
+        if os.path.isfile(os.path.join(pasta, arquivo))
+    ]
+
+
+def validar_arquivos():
+    """
+    Confere se a planilha e o PDF existem antes de rodar.
+    """
+
+    print("==============================================")
+    print("VALIDANDO ARQUIVOS")
+    print("==============================================")
+
+    print(f"Pasta do projeto: {PASTA_PROJETO}")
+    print(f"Planilha esperada: {PLANILHA_MODELO}")
+    if not os.path.exists(PLANILHA_MODELO):
+        print("\n❌ Planilha modelo não encontrada.")
+        print(f"Coloque a planilha dentro da pasta: {PASTA_PLANILHA_MODELO}")
+        print("\nArquivos encontrados nessa pasta:")
+
+        arquivos = listar_arquivos_da_pasta(PASTA_PLANILHA_MODELO)
+
+        if arquivos:
+            for arquivo in arquivos:
+                print(f" - {arquivo}")
+        else:
+            print(" Nenhum arquivo encontrado.")
+
+        raise FileNotFoundError(f"Planilha não encontrada: {PLANILHA_MODELO}")
+
+    pdf_folha = localizar_pdf_folha()
+
+    if not pdf_folha:
+        print("\n❌ PDF da folha de pagamento não encontrado.")
+        print(f"Coloque o PDF dentro da pasta: {PASTA_FOLHAS_PAGAMENTO}")
+        print("\nArquivos encontrados nessa pasta:")
+
+        arquivos = listar_arquivos_da_pasta(PASTA_FOLHAS_PAGAMENTO)
+
+        if arquivos:
+            for arquivo in arquivos:
+                print(f" - {arquivo}")
+        else:
+            print(" Nenhum arquivo encontrado.")
+
+        raise FileNotFoundError(f"PDF não encontrado na pasta: {PASTA_FOLHAS_PAGAMENTO}")
+
+    print("[OK] Planilha encontrada.")
+    print(f"[OK] PDF encontrado: {pdf_folha}")
+    return pdf_folha
+
+
+def localizar_pdf_folha():
+    """
+    Localiza PDF(s) na pasta de folhas.
+    Se houver mais de um, usa o mais recente por data de modificacao.
+    """
+
+    if not os.path.exists(PASTA_FOLHAS_PAGAMENTO):
+        return None
+
+    pdfs = []
+    for arquivo in os.listdir(PASTA_FOLHAS_PAGAMENTO):
+        caminho = os.path.join(PASTA_FOLHAS_PAGAMENTO, arquivo)
+        if os.path.isfile(caminho) and arquivo.lower().endswith(".pdf"):
+            pdfs.append(caminho)
+
+    if not pdfs:
+        return None
+
+    pdfs.sort(key=os.path.getmtime, reverse=True)
+    return pdfs[0]
+
+
+# ============================================================
+# FUNÇÕES DE TRATAMENTO DE TEXTO
+# ============================================================
+
+def normalizar_texto(texto):
+    """
+    Normaliza texto para comparação:
+    remove acentos, deixa maiúsculo e limpa espaços.
+    """
+
+    if texto is None:
+        return ""
+
+    texto = str(texto).strip().upper()
+    texto = unicodedata.normalize("NFD", texto)
+    texto = "".join(c for c in texto if unicodedata.category(c) != "Mn")
+    texto = re.sub(r"\s+", " ", texto)
+
+    return texto
+
+
+def limpar_texto(texto):
+    """
+    Limpa quebras de linha e espaços duplicados.
+    """
+
+    if texto is None:
+        return ""
+
+    texto = str(texto).replace("\n", " ")
+    texto = re.sub(r"\s+", " ", texto)
+
+    return texto.strip()
+
+
+# ============================================================
+# EXTRAÇÃO DO PDF
+# ============================================================
+
+def extrair_texto_pdf(caminho_pdf):
+    """
+    Extrai texto do PDF usando PyMuPDF.
+    Mostra prévia das primeiras páginas para debug.
+    """
+
+    texto_completo = ""
+
+    with fitz.open(caminho_pdf) as pdf:
+        total_paginas = len(pdf)
+
+        print(f"[INFO] Total de paginas no PDF: {total_paginas}")
+
+        for numero_pagina, pagina in enumerate(pdf, start=1):
+            texto_pagina = pagina.get_text("text")
+            texto_completo += texto_pagina + "\n"
+
+            # Mostra prévia das 3 primeiras páginas
+            if numero_pagina <= 3:
+                print(f"\n--- PRÉVIA TEXTO PÁGINA {numero_pagina} ---")
+                print(texto_pagina[:1000])
+                print("--- FIM PRÉVIA ---\n")
+
+            if numero_pagina % 20 == 0:
+                print(f"   Páginas lidas: {numero_pagina}/{total_paginas}")
+
+    return texto_completo
+
+
+def salvar_debug_texto(texto):
+    """
+    Salva o texto extraído do PDF para conferência.
+    """
+
+    caminho_debug = os.path.join(PASTA_ARQUIVOS_GERADOS, "debug_texto_extraido.txt")
+
+    with open(caminho_debug, "w", encoding="utf-8") as arquivo:
+        arquivo.write(texto)
+
+    print("[INFO] Texto extraido salvo para conferencia em:")
+    print(caminho_debug)
+
+
+def extrair_colaboradores_da_folha(caminho_pdf):
+    """
+    Extrai colaboradores da folha de pagamento de forma mais robusta.
+
+    Tentativa 1:
+    - Lê linha por linha
+    - Procura linha com Empr.:
+    - Depois procura linha com Cargo: e C.B.O:
+
+    Tentativa 2:
+    - Usa regex no texto inteiro
+
+    Tentativa 3:
+    - Usa blocos entre Empr.: atual e próximo Empr.:
+    """
+
+    texto = extrair_texto_pdf(caminho_pdf)
+
+    if not texto.strip():
+        raise Exception(
+            "Não foi possível extrair texto do PDF. "
+            "O PDF pode estar escaneado. Nesse caso será necessário OCR."
+        )
+
+    salvar_debug_texto(texto)
+
+    colaboradores = []
+
+    # ========================================================
+    # TENTATIVA 1 - LINHA POR LINHA (FORMATO COM ROTULOS QUEBRADOS)
+    # ========================================================
+
+    print("[INFO] Tentativa 1: buscando por linhas...")
+
+    linhas = texto.splitlines()
+    colaborador_atual = None
+
+    def proxima_linha_com_texto(indice_inicial, limite=6):
+        for deslocamento in range(1, limite + 1):
+            idx = indice_inicial + deslocamento
+            if idx >= len(linhas):
+                break
+            valor = limpar_texto(linhas[idx])
+            if valor:
+                return valor
+        return ""
+
+    for i, linha in enumerate(linhas):
+        linha_limpa = limpar_texto(linha)
+        linha_norm = normalizar_texto(linha_limpa)
+
+        if not linha_limpa:
+            continue
+
+        # Caso 1: linha já vem completa com Empr., matrícula e nome
+        if "EMPR.:" in linha_norm and "SITUACAO:" in linha_norm:
+            padrao_empr = re.search(
+                r"Empr\.\:\s*(\d+)\s+(.+?)\s+Situa..o\:",
+                linha_limpa,
+                re.IGNORECASE
+            )
+            if padrao_empr:
+                colaborador_atual = {
+                    "matricula": limpar_texto(padrao_empr.group(1)),
+                    "nome": limpar_texto(padrao_empr.group(2)),
+                    "codigo_cargo": "",
+                    "funcao": "",
+                    "cbo": ""
+                }
+                continue
+
+        # Caso 2: no PDF atual a linha anterior contém "MATRICULA NOME"
+        # e a linha atual contém apenas "Empr.:"
+        if linha_norm == "EMPR.:" and i > 0:
+            linha_anterior = limpar_texto(linhas[i - 1])
+            match_anterior = re.match(r"^(\d+)\s+(.+)$", linha_anterior)
+            if match_anterior:
+                colaborador_atual = {
+                    "matricula": limpar_texto(match_anterior.group(1)),
+                    "nome": limpar_texto(match_anterior.group(2)),
+                    "codigo_cargo": "",
+                    "funcao": "",
+                    "cbo": ""
+                }
+            continue
+
+        # Captura cargo quando o rótulo vem em linha separada
+        if colaborador_atual and linha_norm == "CARGO:":
+            linha_cargo = proxima_linha_com_texto(i, limite=4)
+            match_cargo = re.match(r"^(\d+)\s+(.+)$", linha_cargo)
+            if match_cargo:
+                colaborador_atual["codigo_cargo"] = limpar_texto(match_cargo.group(1))
+                colaborador_atual["funcao"] = limpar_texto(match_cargo.group(2))
+            continue
+
+        # Captura CBO quando o rótulo vem em linha separada
+        if colaborador_atual and linha_norm.startswith("C.B.O:"):
+            cbo_encontrado = ""
+
+            # Primeiro tenta na própria linha
+            match_cbo_mesma_linha = re.search(r"C\.B\.O\:\s*(\d{6})", linha_limpa, re.IGNORECASE)
+            if match_cbo_mesma_linha:
+                cbo_encontrado = limpar_texto(match_cbo_mesma_linha.group(1))
+            else:
+                # Se estiver quebrado, busca nas próximas linhas
+                for deslocamento in range(1, 6):
+                    idx = i + deslocamento
+                    if idx >= len(linhas):
+                        break
+                    candidato = limpar_texto(linhas[idx])
+                    match_cbo = re.search(r"\b(\d{6})\b", candidato)
+                    if match_cbo:
+                        cbo_encontrado = limpar_texto(match_cbo.group(1))
+                        break
+
+            if cbo_encontrado:
+                colaborador_atual["cbo"] = cbo_encontrado
+
+            if (
+                colaborador_atual.get("matricula")
+                and colaborador_atual.get("nome")
+                and colaborador_atual.get("funcao")
+                and colaborador_atual.get("cbo")
+            ):
+                colaboradores.append(colaborador_atual)
+
+            colaborador_atual = None
+            continue
+
+    print(f"Resultado tentativa 1: {len(colaboradores)} colaboradores")
+
+    # ========================================================
+    # TENTATIVA 2 - TEXTO INTEIRO EM UMA LINHA
+    # ========================================================
+
+    if not colaboradores:
+        print("[WARN] Tentativa 1 nao encontrou colaboradores.")
+        print("[INFO] Tentativa 2: buscando no texto inteiro...")
+
+        texto_unico = limpar_texto(texto)
+
+        padrao_bloco = re.compile(
+            r"Empr\.\:\s*(\d+)\s+(.+?)\s+Situação\:.*?"
+            r"Cargo\:\s*(\d+)\s+(.+?)\s+C\.B\.O\:\s*(\d+)",
+            re.IGNORECASE | re.DOTALL
+        )
+
+        for match in padrao_bloco.finditer(texto_unico):
+            colaboradores.append({
+                "matricula": limpar_texto(match.group(1)),
+                "nome": limpar_texto(match.group(2)),
+                "codigo_cargo": limpar_texto(match.group(3)),
+                "funcao": limpar_texto(match.group(4)),
+                "cbo": limpar_texto(match.group(5))
+            })
+
+        print(f"Resultado tentativa 2: {len(colaboradores)} colaboradores")
+
+    # ========================================================
+    # TENTATIVA 3 - BLOCOS ENTRE UM EMPR E OUTRO
+    # ========================================================
+
+    if not colaboradores:
+        print("[WARN] Tentativa 2 nao encontrou colaboradores.")
+        print("[INFO] Tentativa 3: buscando por blocos de colaborador...")
+
+        texto_unico = limpar_texto(texto)
+
+        # Divide o texto em blocos começando por Empr.:
+        blocos = re.split(r"(?=Empr\.\:)", texto_unico)
+
+        for bloco in blocos:
+            if "Empr.:" not in bloco or "Cargo:" not in bloco or "C.B.O:" not in bloco:
+                continue
+
+            match_empr = re.search(
+                r"Empr\.\:\s*(\d+)\s+(.+?)\s+Situação\:",
+                bloco,
+                re.IGNORECASE
+            )
+
+            match_cargo = re.search(
+                r"Cargo\:\s*(\d+)\s+(.+?)\s+C\.B\.O\:\s*(\d+)",
+                bloco,
+                re.IGNORECASE
+            )
+
+            if match_empr and match_cargo:
+                colaboradores.append({
+                    "matricula": limpar_texto(match_empr.group(1)),
+                    "nome": limpar_texto(match_empr.group(2)),
+                    "codigo_cargo": limpar_texto(match_cargo.group(1)),
+                    "funcao": limpar_texto(match_cargo.group(2)),
+                    "cbo": limpar_texto(match_cargo.group(3))
+                })
+
+        print(f"Resultado tentativa 3: {len(colaboradores)} colaboradores")
+
+    # ========================================================
+    # LIMPEZA FINAL E REMOÇÃO DE DUPLICIDADES
+    # ========================================================
+
+    unicos = {}
+
+    for item in colaboradores:
+        nome = limpar_texto(item.get("nome", ""))
+        funcao = limpar_texto(item.get("funcao", ""))
+        cbo = limpar_texto(item.get("cbo", ""))
+        matricula = limpar_texto(item.get("matricula", ""))
+        codigo_cargo = limpar_texto(item.get("codigo_cargo", ""))
+
+        if not nome or not funcao or not cbo:
+            continue
+
+        chave = (
+            normalizar_texto(matricula)
+            + "|"
+            + normalizar_texto(nome)
+            + "|"
+            + normalizar_texto(funcao)
+            + "|"
+            + normalizar_texto(cbo)
+        )
+
+        unicos[chave] = {
+            "matricula": matricula,
+            "nome": nome,
+            "codigo_cargo": codigo_cargo,
+            "funcao": funcao,
+            "cbo": cbo
+        }
+
+    lista_final = list(unicos.values())
+    lista_final.sort(key=lambda x: normalizar_texto(x["nome"]))
+
+    print(f"[OK] Colaboradores localizados apos tratamento: {len(lista_final)}")
+
+    if len(lista_final) == 0:
+        print("\n[ERRO] Nenhum colaborador foi encontrado.")
+        print("Abra o arquivo abaixo e veja se aparecem os termos Empr., Cargo e C.B.O:")
+        print(os.path.join(PASTA_ARQUIVOS_GERADOS, "debug_texto_extraido.txt"))
+        print("\nSe esses termos não aparecerem, o PDF provavelmente está escaneado/imagem e precisará de OCR.")
+
+    return lista_final
+
+
+# ============================================================
+# FUNÇÕES DE ESTILO DA PLANILHA
+# ============================================================
+
+def copiar_estilo_celula(origem, destino):
+    """
+    Copia o estilo de uma célula para outra.
+    """
+
+    if origem.has_style:
+        destino.font = copy(origem.font)
+        destino.fill = copy(origem.fill)
+        destino.border = copy(origem.border)
+        destino.alignment = copy(origem.alignment)
+        destino.number_format = origem.number_format
+        destino.protection = copy(origem.protection)
+
+
+def copiar_estilo_linha(ws, linha_origem, linha_destino, colunas):
+    """
+    Copia estilo da linha modelo para a linha de destino.
+    """
+
+    for col in colunas:
+        copiar_estilo_celula(
+            ws[f"{col}{linha_origem}"],
+            ws[f"{col}{linha_destino}"]
+        )
+
+
+def ajustar_larguras(ws):
+    """
+    Ajusta larguras básicas das colunas.
+    """
+
+    ws.column_dimensions[COL_NOME].width = 40
+    ws.column_dimensions[COL_FUNCAO].width = 34
+    ws.column_dimensions[COL_CBO].width = 14
+    ws.column_dimensions[COL_OBRA].width = 38
+    ws.column_dimensions[COL_CNO_CNPJ].width = 28
+    ws.column_dimensions[COL_REFERENCIA_ANTERIOR].width = 42
+    ws.column_dimensions[COL_STATUS].width = 42
+
+
+# ============================================================
+# FUNÇÕES DE REFERÊNCIA CNO/CNPJ
+# ============================================================
+
+def montar_identificador_padrao():
+    """
+    Monta CNO ou CNPJ padrão para funções novas.
+    """
+
+    tipo = TIPO_IDENTIFICADOR_PADRAO.strip().upper()
+
+    if tipo == "CNO":
+        return f"CNO: {CNO_PADRAO}"
+
+    if tipo == "CNPJ":
+        return f"CNPJ: {CNPJ_PADRAO}"
+
+    raise Exception("TIPO_IDENTIFICADOR_PADRAO precisa ser 'CNO' ou 'CNPJ'.")
+
+
+def carregar_referencia_por_funcao(wb):
+    """
+    Lê a aba do mês anterior e cria uma referência por função.
+
+    Regra:
+    - Função está na coluna C
+    - CBO está na coluna D
+    - CNO/CNPJ está na coluna F
+
+    Se a função aparecer no mês atual, o script usa o mesmo CNO/CNPJ
+    que foi utilizado no mês anterior.
+    """
+
+    referencia = {}
+
+    if not ABA_MES_ANTERIOR:
+        print("[WARN] Aba do mes anterior nao informada.")
+        return referencia
+
+    if ABA_MES_ANTERIOR not in wb.sheetnames:
+        print(f"[WARN] Aba '{ABA_MES_ANTERIOR}' nao encontrada.")
+        print("A comparacao por funcao sera ignorada.")
+        return referencia
+
+    ws_ant = wb[ABA_MES_ANTERIOR]
+
+    for linha in range(LINHA_INICIAL, ws_ant.max_row + 1):
+        funcao = ws_ant[f"{COL_FUNCAO}{linha}"].value
+        cbo = ws_ant[f"{COL_CBO}{linha}"].value
+        cno_cnpj = ws_ant[f"{COL_CNO_CNPJ}{linha}"].value
+
+        if not funcao or not cno_cnpj:
+            continue
+
+        funcao_limpa = limpar_texto(funcao)
+        cbo_limpo = limpar_texto(cbo)
+        cno_cnpj_limpo = limpar_texto(cno_cnpj)
+
+        chave_funcao = normalizar_texto(funcao_limpa)
+
+        # Mantém a primeira referência encontrada por função
+        if chave_funcao not in referencia:
+            referencia[chave_funcao] = {
+                "funcao": funcao_limpa,
+                "cbo": cbo_limpo,
+                "cno_cnpj": cno_cnpj_limpo,
+                "linha_origem": linha
+            }
+
+    print(f"[OK] Funcoes encontradas no mes anterior: {len(referencia)}")
+
+    return referencia
+
+
+# ============================================================
+# LIMPEZA E PREENCHIMENTO DA PLANILHA
+# ============================================================
+
+def limpar_area_destino(ws):
+    """
+    Limpa apenas as colunas usadas pelo script.
+    """
+
+    colunas_limpar = [
+        COL_NOME,
+        COL_FUNCAO,
+        COL_CBO,
+        COL_OBRA,
+        COL_CNO_CNPJ,
+        COL_REFERENCIA_ANTERIOR,
+        COL_STATUS
+    ]
+
+    for linha in range(LINHA_INICIAL, ws.max_row + 1):
+        for col in colunas_limpar:
+            ws[f"{col}{linha}"] = None
+
+
+def preencher_cabecalhos_controle(ws):
+    """
+    Preenche cabeçalhos nas colunas extras de conferência.
+    """
+
+    ws[f"{COL_REFERENCIA_ANTERIOR}2"] = "REFERÊNCIA MÊS ANTERIOR"
+    ws[f"{COL_STATUS}2"] = "STATUS"
+
+
+def gerar_nome_saida(caminho_pdf_folha):
+    """
+    Gera o arquivo final dentro da pasta arquivos_gerados.
+    """
+
+    nome_planilha_sem_extensao = os.path.splitext(NOME_PLANILHA_MODELO)[0]
+    nome_pdf_sem_extensao = os.path.splitext(os.path.basename(caminho_pdf_folha))[0]
+
+    data_hora = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    nome_saida = (
+        f"{nome_planilha_sem_extensao}_PREENCHIDO_"
+        f"{nome_pdf_sem_extensao}_{data_hora}.xlsx"
+    )
+
+    return os.path.join(PASTA_ARQUIVOS_GERADOS, nome_saida)
+
+
+# ============================================================
+# FUNÇÃO PRINCIPAL
+# ============================================================
+
+def preencher_planilha():
+    print("==============================================")
+    print("INICIANDO PREENCHIMENTO AUTOMÁTICO")
+    print("==============================================")
+
+    criar_pastas_necessarias()
+    pdf_folha = validar_arquivos()
+
+    print("\n[INFO] Lendo folha de pagamento...")
+    colaboradores = extrair_colaboradores_da_folha(pdf_folha)
+
+    print(f"[OK] Colaboradores extraidos: {len(colaboradores)}")
+
+    if not colaboradores:
+        raise Exception(
+            "Nenhum colaborador foi encontrado no PDF. "
+            "Verifique o arquivo debug_texto_extraido.txt na pasta arquivos_gerados."
+        )
+
+    print("\n[INFO] Abrindo planilha modelo...")
+    wb = load_workbook(PLANILHA_MODELO)
+
+    if ABA_DESTINO not in wb.sheetnames:
+        print("\n[ERRO] Aba de destino nao encontrada.")
+        print("Abas disponiveis na planilha:")
+
+        for aba in wb.sheetnames:
+            print(f" - {aba}")
+
+        raise Exception(f"Aba '{ABA_DESTINO}' não encontrada.")
+
+    ws = wb[ABA_DESTINO]
+
+    print("\n[INFO] Lendo referencia do mes anterior por funcao...")
+    referencia_por_funcao = carregar_referencia_por_funcao(wb)
+
+    identificador_padrao = montar_identificador_padrao()
+    print(f"[INFO] Identificador padrao para funcao nova: {identificador_padrao}")
+
+    print("\n[INFO] Limpando area de destino...")
+    limpar_area_destino(ws)
+
+    preencher_cabecalhos_controle(ws)
+
+    colunas_estilo = [
+        COL_NOME,
+        COL_FUNCAO,
+        COL_CBO,
+        COL_OBRA,
+        COL_CNO_CNPJ,
+        COL_REFERENCIA_ANTERIOR,
+        COL_STATUS
+    ]
+
+    linha_modelo = LINHA_INICIAL
+
+    print("\n[INFO] Preenchendo planilha...")
+
+    total_mantidos = 0
+    total_novos = 0
+    total_cbo_diferente = 0
+
+    for indice, colaborador in enumerate(colaboradores):
+        linha = LINHA_INICIAL + indice
+
+        if linha != linha_modelo:
+            copiar_estilo_linha(ws, linha_modelo, linha, colunas_estilo)
+
+        nome = colaborador["nome"]
+        funcao = colaborador["funcao"]
+        cbo = colaborador["cbo"]
+
+        chave_funcao = normalizar_texto(funcao)
+        dados_funcao_anterior = referencia_por_funcao.get(chave_funcao)
+
+        if dados_funcao_anterior:
+            cno_cnpj_final = dados_funcao_anterior["cno_cnpj"]
+            funcao_referencia = dados_funcao_anterior["funcao"]
+            cbo_referencia = dados_funcao_anterior["cbo"]
+
+            referencia_texto = f"{funcao_referencia} | CBO: {cbo_referencia}"
+
+            if normalizar_texto(cbo_referencia) == normalizar_texto(cbo):
+                status = "FUNÇÃO JÁ EXISTIA - CNO/CNPJ MANTIDO"
+                total_mantidos += 1
+            else:
+                status = "FUNÇÃO EXISTIA, MAS CBO DIFERENTE - CNO/CNPJ MANTIDO"
+                total_cbo_diferente += 1
+
+        else:
+            cno_cnpj_final = identificador_padrao
+            referencia_texto = ""
+            status = "FUNÇÃO NOVA - USADO IDENTIFICADOR PADRÃO"
+            total_novos += 1
+
+        ws[f"{COL_NOME}{linha}"] = nome
+        ws[f"{COL_FUNCAO}{linha}"] = funcao
+        ws[f"{COL_CBO}{linha}"] = cbo
+        ws[f"{COL_OBRA}{linha}"] = OBRA_ATUAL
+        ws[f"{COL_CNO_CNPJ}{linha}"] = cno_cnpj_final
+        ws[f"{COL_REFERENCIA_ANTERIOR}{linha}"] = referencia_texto
+        ws[f"{COL_STATUS}{linha}"] = status
+
+    ajustar_larguras(ws)
+
+    arquivo_saida = gerar_nome_saida(pdf_folha)
+
+    print("\n[INFO] Salvando arquivo final...")
+    wb.save(arquivo_saida)
+
+    print("\n==============================================")
+    print("PROCESSO FINALIZADO COM SUCESSO")
+    print("==============================================")
+    print(f"Total de colaboradores preenchidos: {len(colaboradores)}")
+    print(f"Funções com CNO/CNPJ mantido do mês anterior: {total_mantidos}")
+    print(f"Funções novas com identificador padrão: {total_novos}")
+    print(f"Funções com CBO diferente: {total_cbo_diferente}")
+    print("\nArquivo final gerado em:")
+    print(arquivo_saida)
+
+
+# ============================================================
+# EXECUTAR
+# ============================================================
+
+if __name__ == "__main__":
+    preencher_planilha()

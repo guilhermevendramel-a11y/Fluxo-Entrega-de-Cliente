@@ -1,0 +1,1047 @@
+2026-05-29 10:33:22 | INFO | Inicio da execucao
+2026-05-29 10:33:22 | INFO | VERSAO_SCRIPT: MAX_EXTRACAO_LOCAL_V6
+2026-05-29 10:33:22 | INFO | Base do projeto: C:\Users\Notebook\Desktop\Fluxo Entrega de Cliente\PROJETO PY - EXTRAIR PDF LOCAL
+2026-05-29 10:33:22 | INFO | Relacao carregada: colaboradores.txt | total nomes: 357
+2026-05-29 10:33:22 | INFO | Database de apoio carregado: C:\Users\Notebook\Desktop\Fluxo Entrega de Cliente\PROJETO PY - EXTRAIR PDF LOCAL\database_comprovantes_relacao_colaboradores.csv | registros uteis: 678
+2026-05-29 10:33:22 | INFO | Database de apoio carregado: C:\Users\Notebook\Desktop\Fluxo Entrega de Cliente\PROJETO PY - EXTRAIR PDF LOCAL\entrada\database\database_comprovantes_relacao_colaboradores.csv | registros uteis: 678
+2026-05-29 10:33:22 | INFO | Database de apoio carregado: c:\Users\Notebook\Downloads\database_comprovantes_relacao_colaboradores.csv | registros uteis: 678
+2026-05-29 10:33:22 | INFO | Arquivos PDF encontrados: COMPROVANTES Service Abril.pdf
+2026-05-29 10:33:22 | INFO | Lendo PDF: COMPROVANTES Service Abril.pdf | paginas: 678
+2026-05-29 10:33:22 | INFO | Pagina 1 de COMPROVANTES Service Abril.pdf | nome extraido: FRANCISCO HUGO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 2 de COMPROVANTES Service Abril.pdf | nome extraido: FRANCISCO JOSE DE LIMA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 3 de COMPROVANTES Service Abril.pdf | nome extraido: FRANCISCO JOSE SOUSA CARNEIR | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 4 de COMPROVANTES Service Abril.pdf | nome extraido: FRANCISCO LEOMAR DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 5 de COMPROVANTES Service Abril.pdf | nome extraido: FRANCISCO LOPES CANUTO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 6 de COMPROVANTES Service Abril.pdf | nome extraido: GABRIEL ARAUJO DO NASCIMENTO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 7 de COMPROVANTES Service Abril.pdf | nome extraido: GABRIEL BRAZ BARROS DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 8 de COMPROVANTES Service Abril.pdf | nome extraido: GABRIEL DOS SANTOS FERNANDES | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 9 de COMPROVANTES Service Abril.pdf | nome extraido: GABRIEL RODRIGUES PINTO OLIV | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 10 de COMPROVANTES Service Abril.pdf | nome extraido: GABRIELA DIAS ALBA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 11 de COMPROVANTES Service Abril.pdf | nome extraido: Gabriele Lima VieirA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 12 de COMPROVANTES Service Abril.pdf | nome extraido: GABRIELI LIMA BALAO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 13 de COMPROVANTES Service Abril.pdf | nome extraido: GEILSON JOSE DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 14 de COMPROVANTES Service Abril.pdf | nome extraido: GEISA MAIRA MOREIRA DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 15 de COMPROVANTES Service Abril.pdf | nome extraido: GENESSON DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 16 de COMPROVANTES Service Abril.pdf | nome extraido: Genivaldo Pereira de Miranda | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 17 de COMPROVANTES Service Abril.pdf | nome extraido: GEORGE FRANCISCO LEITE REIS | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 18 de COMPROVANTES Service Abril.pdf | nome extraido: GEORGIANO SOUSA CARDOSO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 19 de COMPROVANTES Service Abril.pdf | nome extraido: GERALDO CASSIO PEREIRA DOS S | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 20 de COMPROVANTES Service Abril.pdf | nome extraido: GERLAINE DA SILVA BARBOSA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 21 de COMPROVANTES Service Abril.pdf | nome extraido: GERSON FALCAO SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 22 de COMPROVANTES Service Abril.pdf | nome extraido: GESIANE DE ALMEIDA AGUIRRES | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 23 de COMPROVANTES Service Abril.pdf | nome extraido: GILBERTO DOS SANTOS DIAS | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 24 de COMPROVANTES Service Abril.pdf | nome extraido: GILBERTO FERNANDES SOARES | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 25 de COMPROVANTES Service Abril.pdf | nome extraido: GILDO ALVES DE ARAUJO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 26 de COMPROVANTES Service Abril.pdf | nome extraido: GILSON ALVES GOMES | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 27 de COMPROVANTES Service Abril.pdf | nome extraido: GILSONEI SOUZA DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 28 de COMPROVANTES Service Abril.pdf | nome extraido: GILVAN NUNES DE OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 29 de COMPROVANTES Service Abril.pdf | nome extraido: GIOVANA N DE CASTRO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 30 de COMPROVANTES Service Abril.pdf | nome extraido: GIVANILDO BARBOSA DE SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 31 de COMPROVANTES Service Abril.pdf | nome extraido: GIVANILDO JOSE DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 32 de COMPROVANTES Service Abril.pdf | nome extraido: GIVANILDO PEREIRA ALMEIDA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 33 de COMPROVANTES Service Abril.pdf | nome extraido: Guilherme Arcini Vendramel | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 34 de COMPROVANTES Service Abril.pdf | nome extraido: GUILHERME DAL BEM RIBEIRO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 35 de COMPROVANTES Service Abril.pdf | nome extraido: GUILHERME DE OLIVEIRA CARDOS | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 36 de COMPROVANTES Service Abril.pdf | nome extraido: GUILHERME EMANUEL ABREU | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 37 de COMPROVANTES Service Abril.pdf | nome extraido: GUILHERME KAIC SATO CANISELL | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 38 de COMPROVANTES Service Abril.pdf | nome extraido: GUILHERME MELO SILVA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 39 de COMPROVANTES Service Abril.pdf | nome extraido: GUILHERME PORTELLA DIAS | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 40 de COMPROVANTES Service Abril.pdf | nome extraido: GUSTAVO BRITO DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 41 de COMPROVANTES Service Abril.pdf | nome extraido: GUSTAVO DANIEL FERREIRA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 42 de COMPROVANTES Service Abril.pdf | nome extraido: GUSTAVO DANIEL SILVA OLIVEIR | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 43 de COMPROVANTES Service Abril.pdf | nome extraido: GUSTAVO HENRIQUE ALVES DE SO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 44 de COMPROVANTES Service Abril.pdf | nome extraido: GUSTAVO JUCELIO PEREIRA DA S | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 45 de COMPROVANTES Service Abril.pdf | nome extraido: GUTEMBERG KERRIGAN ALVES ALB | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 46 de COMPROVANTES Service Abril.pdf | nome extraido: HARRISON VINICIUS LEANDRO SI | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 47 de COMPROVANTES Service Abril.pdf | nome extraido: Helder Alexandre Santana de | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 48 de COMPROVANTES Service Abril.pdf | nome extraido: HELENA PEGGAU DE GOES | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 49 de COMPROVANTES Service Abril.pdf | nome extraido: HENRIQUE GONCALO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 50 de COMPROVANTES Service Abril.pdf | nome extraido: HERBERT SILVA DE SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 51 de COMPROVANTES Service Abril.pdf | nome extraido: HERMES GIESE EMANUEL E SILVA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 52 de COMPROVANTES Service Abril.pdf | nome extraido: HORACIO QUEIROZ DE OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 53 de COMPROVANTES Service Abril.pdf | nome extraido: Hubert Silva Barbosa | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 54 de COMPROVANTES Service Abril.pdf | nome extraido: HUGO PELLICANO SARAPIAO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 55 de COMPROVANTES Service Abril.pdf | nome extraido: IAGO AQUINO FERREIRA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 56 de COMPROVANTES Service Abril.pdf | nome extraido: Iago Goncalves Moz Ferreira | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 57 de COMPROVANTES Service Abril.pdf | nome extraido: IDNER CAVALCANTE BARBOSA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 58 de COMPROVANTES Service Abril.pdf | nome extraido: IGOR BATISTA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 59 de COMPROVANTES Service Abril.pdf | nome extraido: IGOR BRUNO DE CARVALHO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 60 de COMPROVANTES Service Abril.pdf | nome extraido: IGOR SANTOS PEDROSA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 61 de COMPROVANTES Service Abril.pdf | nome extraido: ISAAC DA SILVA BEZERRA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 62 de COMPROVANTES Service Abril.pdf | nome extraido: ISABELLE DE FATIMA TEODORO D | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 63 de COMPROVANTES Service Abril.pdf | nome extraido: ISRAEL AFONSO SOARES JUNIOR | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 64 de COMPROVANTES Service Abril.pdf | nome extraido: ITALO DAVI DO SACRAMENTO SAN | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 65 de COMPROVANTES Service Abril.pdf | nome extraido: IVAN JORGE FERREIRA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 66 de COMPROVANTES Service Abril.pdf | nome extraido: IVSON DA SILVA COELHO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 67 de COMPROVANTES Service Abril.pdf | nome extraido: JACKSON AMORIM DINIZ | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 68 de COMPROVANTES Service Abril.pdf | nome extraido: JACKSON SOARES MOREIRA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 69 de COMPROVANTES Service Abril.pdf | nome extraido: JACKSON SOUSA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 70 de COMPROVANTES Service Abril.pdf | nome extraido: JACSON DA SILVA DE CARVALHO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 71 de COMPROVANTES Service Abril.pdf | nome extraido: JADSON PEREIRA DE OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 72 de COMPROVANTES Service Abril.pdf | nome extraido: JAILSON JOAQUIM ALVES DE SAN | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 73 de COMPROVANTES Service Abril.pdf | nome extraido: JAILSON PEREIRA DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 74 de COMPROVANTES Service Abril.pdf | nome extraido: JAILTON SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 75 de COMPROVANTES Service Abril.pdf | nome extraido: JAILTON SILVA DE JESUS | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 76 de COMPROVANTES Service Abril.pdf | nome extraido: JAIR SILVA DE OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 77 de COMPROVANTES Service Abril.pdf | nome extraido: JAIRO SANTOS SANTIAGO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 78 de COMPROVANTES Service Abril.pdf | nome extraido: JALSON COSTA BARROS | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 79 de COMPROVANTES Service Abril.pdf | nome extraido: JANAILTO DE SOUSA NEPONUCENO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 80 de COMPROVANTES Service Abril.pdf | nome extraido: JANDERSON ALVES DE MELO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 81 de COMPROVANTES Service Abril.pdf | nome extraido: JANIO DA LUZ SILVA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 82 de COMPROVANTES Service Abril.pdf | nome extraido: JEANDSON CARLOS DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 83 de COMPROVANTES Service Abril.pdf | nome extraido: JEFERSON TIAGO DE SOUZA CARD | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 84 de COMPROVANTES Service Abril.pdf | nome extraido: JEFFERSON SILVA SANTANA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 85 de COMPROVANTES Service Abril.pdf | nome extraido: JEHAN GABRIEL TAVARES TERTO | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 86 de COMPROVANTES Service Abril.pdf | nome extraido: JEISIAN TEIXEIRA DE OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 87 de COMPROVANTES Service Abril.pdf | nome extraido: JENILSON SILVA DE JESUS | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 88 de COMPROVANTES Service Abril.pdf | nome extraido: JEOVANNE DAVINO MENESES SILV | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 89 de COMPROVANTES Service Abril.pdf | nome extraido: JESSICA PAMELA GRAVENA | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 90 de COMPROVANTES Service Abril.pdf | nome extraido: JHONATAN JUNEO RODRIGUES SAN | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 91 de COMPROVANTES Service Abril.pdf | nome extraido: Jiovana Santos Nunes | metodo: regex_flexivel
+2026-05-29 10:33:22 | INFO | Pagina 92 de COMPROVANTES Service Abril.pdf | nome extraido: JOANA MARIA PATRICIO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 93 de COMPROVANTES Service Abril.pdf | nome extraido: JOANAS BATISTA DE JESUS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 94 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO ADRIEL Nunes | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 95 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO BATISTA DA ROCHA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 96 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO BOSCO CARDOSO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 97 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO DE DEUS DA COSTA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 98 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO DE SOUZA BARROSO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 99 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO FRANCISCO MIRANDA FILHO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 100 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO GUILHERME SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 101 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO JAQUES RAMOS MADUREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 102 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO LUCAS CABRAL CORRREA SO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 103 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO LUCAS PINHEIRO OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 104 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO LUIS RONCON | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 105 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO NATANAEL SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 106 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO PAULO DA SILVA LIMA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 107 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO PEDRO RODRIGUES DE HOLA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 108 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO SANTOS DE SANTANA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 109 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO VICTOR QUEIROZ DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 110 de COMPROVANTES Service Abril.pdf | nome extraido: Joao Vitor Gomes Santos | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 111 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO VITOR PEREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 112 de COMPROVANTES Service Abril.pdf | nome extraido: JOAQUIM DE SOUSA SOBRINHO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 113 de COMPROVANTES Service Abril.pdf | nome extraido: JOAQUIM SIMAO NETO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 114 de COMPROVANTES Service Abril.pdf | nome extraido: JOCENIR NASCIMENTO BRITO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 115 de COMPROVANTES Service Abril.pdf | nome extraido: JOCEVAL ROCHA AVELINO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 116 de COMPROVANTES Service Abril.pdf | nome extraido: JOCIELIO DE LIMA FREIRE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 117 de COMPROVANTES Service Abril.pdf | nome extraido: JOEL RAMOS SOUSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 118 de COMPROVANTES Service Abril.pdf | nome extraido: JOELSON LOPES RODRIGUES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 119 de COMPROVANTES Service Abril.pdf | nome extraido: JONTHAN IGOR VIANA BARBOSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 120 de COMPROVANTES Service Abril.pdf | nome extraido: JORDEL FRANK SILVA PORTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 121 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE AILTON DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 122 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE ALAN RODRIGUES DOS SANT | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 123 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE ALVES DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 124 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE ALVES DE SANTANA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 125 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE AMARO GOMES DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 126 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE ANTONIO VILA NOVA DE SO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 127 de COMPROVANTES Service Abril.pdf | nome extraido: Jose Augusto Santana Filho | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 128 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE CARLOS MATOS RAMOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 129 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE CICERO PEREIRA DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 130 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE CLEBSON ALVES SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 131 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE DE ASSIS RODRIGUES RAMO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 132 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE DONIZETE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 133 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 134 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE EDSON DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 135 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE JESUS ALVES DE SOUSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 136 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE JOCEMAR OLIVEIRA ZACARI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 137 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE LEONARDO CERQUEIRA LIMA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 138 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE LUIS DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 139 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE MANOEL DE LIMA FILHO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 140 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE MATOSALEM DIAS DA GAMA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 141 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE NADILSON DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 142 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE RICARDO DEONIZIO ROCHA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 143 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE RIQUEMARQUES SOUZA SANT | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 144 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE ROBERTO DA SILVA REIS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 145 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE ROBSON DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 146 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE RONALDO DE CARVALHO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 147 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE RONALDO SOUSA DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 148 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE WELLINGTON ROSADO PEREI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 149 de COMPROVANTES Service Abril.pdf | nome extraido: JOSEAN BARTOLOMEU VIEIRA DE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 150 de COMPROVANTES Service Abril.pdf | nome extraido: JOSEANE ALVES NASCIMENTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 151 de COMPROVANTES Service Abril.pdf | nome extraido: JOSELITO BORGES BARBOSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 152 de COMPROVANTES Service Abril.pdf | nome extraido: JOSEMAR SANTOS DA CONCEICAO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 153 de COMPROVANTES Service Abril.pdf | nome extraido: Josenilton lima do carmo | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 154 de COMPROVANTES Service Abril.pdf | nome extraido: JOSEVALDO MOURA SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 155 de COMPROVANTES Service Abril.pdf | nome extraido: Josias De Sousa Cruz | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 156 de COMPROVANTES Service Abril.pdf | nome extraido: JOSIMARIO VIEIRA DE ANDRADE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 157 de COMPROVANTES Service Abril.pdf | nome extraido: JOSIVAN VIEIRA DE ANRADE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 158 de COMPROVANTES Service Abril.pdf | nome extraido: JOSUE ALVES DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 159 de COMPROVANTES Service Abril.pdf | nome extraido: JOSUE PEREIRA PAULA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 160 de COMPROVANTES Service Abril.pdf | nome extraido: JULIA TAVARES GATTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 161 de COMPROVANTES Service Abril.pdf | nome extraido: JULIANA DE OLIVEIRA DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 162 de COMPROVANTES Service Abril.pdf | nome extraido: JULIANO DA SILVA MATTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 163 de COMPROVANTES Service Abril.pdf | nome extraido: JULIO CESAR JARDIM PEREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 164 de COMPROVANTES Service Abril.pdf | nome extraido: JUMAR DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 165 de COMPROVANTES Service Abril.pdf | nome extraido: JUNEO PEREIRA DE OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 166 de COMPROVANTES Service Abril.pdf | nome extraido: JURACI DA SILVA RAMOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 167 de COMPROVANTES Service Abril.pdf | nome extraido: JUSCELINO BARBOSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 168 de COMPROVANTES Service Abril.pdf | nome extraido: JUTAI DO ROSARIO VILARINHO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 169 de COMPROVANTES Service Abril.pdf | nome extraido: Kaciel Augusto Maciel | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 170 de COMPROVANTES Service Abril.pdf | nome extraido: KAIQUE ALEXANDRE SANTOS DE P | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 171 de COMPROVANTES Service Abril.pdf | nome extraido: KAIQUE RODRIGUES DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 172 de COMPROVANTES Service Abril.pdf | nome extraido: KATHARINA GREINERT BAYERL | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 173 de COMPROVANTES Service Abril.pdf | nome extraido: KELVIN DOS SANTOS VIEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 174 de COMPROVANTES Service Abril.pdf | nome extraido: KESSIS JONATAN DE SOUSA COSM | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 175 de COMPROVANTES Service Abril.pdf | nome extraido: KLEYTON RHANER FONSECA VIANN | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 176 de COMPROVANTES Service Abril.pdf | nome extraido: LARISSA YURI TSUCHIDA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 177 de COMPROVANTES Service Abril.pdf | nome extraido: LAURA LINDOLFO DA COSTA AMAR | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 178 de COMPROVANTES Service Abril.pdf | nome extraido: LEANDRO CONCEICAO DE OLIVEIR | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 179 de COMPROVANTES Service Abril.pdf | nome extraido: LEANDRO CONCEICAO DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 180 de COMPROVANTES Service Abril.pdf | nome extraido: LEANDRO COSTA FERREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 181 de COMPROVANTES Service Abril.pdf | nome extraido: LEANDRO FERREIRA DE JESUS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 182 de COMPROVANTES Service Abril.pdf | nome extraido: LEANDRO MARTINS DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 183 de COMPROVANTES Service Abril.pdf | nome extraido: LEANDRO PEREIRA BRITO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 184 de COMPROVANTES Service Abril.pdf | nome extraido: LEONARDO AUGUSTO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 185 de COMPROVANTES Service Abril.pdf | nome extraido: LEONARDO CORREIA DE SA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 186 de COMPROVANTES Service Abril.pdf | nome extraido: LEONARDO VEROLLA BELIGNI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 187 de COMPROVANTES Service Abril.pdf | nome extraido: LEONIDAS LIMA DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 188 de COMPROVANTES Service Abril.pdf | nome extraido: LOURENCO ARAUJO DO NASCIMENT | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 189 de COMPROVANTES Service Abril.pdf | nome extraido: Luan Lucas Das Chagas Cipria | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 190 de COMPROVANTES Service Abril.pdf | nome extraido: LUANA THAYNA BALESTRE MEDEIR | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 191 de COMPROVANTES Service Abril.pdf | nome extraido: LUCAS CARDOSO DA TRINDADE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 192 de COMPROVANTES Service Abril.pdf | nome extraido: LUCAS DA SILVA SOUSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 193 de COMPROVANTES Service Abril.pdf | nome extraido: LUCAS FREITAS FIALHO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 194 de COMPROVANTES Service Abril.pdf | nome extraido: LUCAS GABRIEL SCHIABER CASAG | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 195 de COMPROVANTES Service Abril.pdf | nome extraido: Lucas Kennedy da Silva Caeta | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 196 de COMPROVANTES Service Abril.pdf | nome extraido: LUCAS LOPES NOLETO CABRAL | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 197 de COMPROVANTES Service Abril.pdf | nome extraido: LUCAS PEREIRA DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 198 de COMPROVANTES Service Abril.pdf | nome extraido: LUCAS SOARES ROCHA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 199 de COMPROVANTES Service Abril.pdf | nome extraido: LUCENILSON MOTA FERREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 200 de COMPROVANTES Service Abril.pdf | nome extraido: LUCIMARA DOS SANTOS PINTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 201 de COMPROVANTES Service Abril.pdf | nome extraido: LUIS ANTONIO FERRAZ | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 202 de COMPROVANTES Service Abril.pdf | nome extraido: Luis Felipe Henrique Carvalh | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 203 de COMPROVANTES Service Abril.pdf | nome extraido: Luis Felipe Rocha | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 204 de COMPROVANTES Service Abril.pdf | nome extraido: LUIS FILIPE DE SOUSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 205 de COMPROVANTES Service Abril.pdf | nome extraido: LUIS GUILHERME FAVA CHINEZI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 206 de COMPROVANTES Service Abril.pdf | nome extraido: LUIS MIGUEL CARVALHO PAULINO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 207 de COMPROVANTES Service Abril.pdf | nome extraido: LUIS OTAVIO OLIVEIRA PEREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 208 de COMPROVANTES Service Abril.pdf | nome extraido: Luiz Carlos Ferraz Vieira | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 209 de COMPROVANTES Service Abril.pdf | nome extraido: LUIZ CLAUDIO DIAS VERSIANI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 210 de COMPROVANTES Service Abril.pdf | nome extraido: LUIZ DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 211 de COMPROVANTES Service Abril.pdf | nome extraido: LUIZ EDUARDO FABIO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 212 de COMPROVANTES Service Abril.pdf | nome extraido: LUIZ ELIAS BARBOSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 213 de COMPROVANTES Service Abril.pdf | nome extraido: LUIZ FLAVIO DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 214 de COMPROVANTES Service Abril.pdf | nome extraido: MANOEL ALVES DA SILVA FILHO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 215 de COMPROVANTES Service Abril.pdf | nome extraido: MANOEL ALVES DE JESUS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 216 de COMPROVANTES Service Abril.pdf | nome extraido: MANOEL MESSIAS LIMA DA CRUZ | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 217 de COMPROVANTES Service Abril.pdf | nome extraido: MANOEL MESSIAS SANTOS DA SIL | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 218 de COMPROVANTES Service Abril.pdf | nome extraido: Manoel Soares Prates | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 219 de COMPROVANTES Service Abril.pdf | nome extraido: MARCELO BRASIL | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 220 de COMPROVANTES Service Abril.pdf | nome extraido: MARCELO DIAS ARGENTINO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 221 de COMPROVANTES Service Abril.pdf | nome extraido: MARCELO HENRIQUE CAMPASSI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 222 de COMPROVANTES Service Abril.pdf | nome extraido: MARCELO MARTINS DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 223 de COMPROVANTES Service Abril.pdf | nome extraido: MARCIO BRITO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 224 de COMPROVANTES Service Abril.pdf | nome extraido: MARCIO MATOS FRANCA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 225 de COMPROVANTES Service Abril.pdf | nome extraido: MARCO ANTONIO MENDES SOBIS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 226 de COMPROVANTES Service Abril.pdf | nome extraido: MARCO ANTONIO PRIANDI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 227 de COMPROVANTES Service Abril.pdf | nome extraido: MARCONES COSTA MARTINS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 228 de COMPROVANTES Service Abril.pdf | nome extraido: MARCOS ALBERTO DE SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 229 de COMPROVANTES Service Abril.pdf | nome extraido: MARCOS ANDRE SOUZA MIRANDA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 230 de COMPROVANTES Service Abril.pdf | nome extraido: MARCOS ANTONIO DO CANTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 231 de COMPROVANTES Service Abril.pdf | nome extraido: MARCOS AURELIO ALVES DA COST | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 232 de COMPROVANTES Service Abril.pdf | nome extraido: MARCOS CARLOS DE ARAUJO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 233 de COMPROVANTES Service Abril.pdf | nome extraido: MARCOS DANIEL PEREIRA DE SOU | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 234 de COMPROVANTES Service Abril.pdf | nome extraido: MARCOS DIONES ARRUDA DA SILV | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 235 de COMPROVANTES Service Abril.pdf | nome extraido: MARCOS JOSE SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 236 de COMPROVANTES Service Abril.pdf | nome extraido: MARCOS PAULO LOPES SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 237 de COMPROVANTES Service Abril.pdf | nome extraido: MARCOS TEOFILO DOS SANTOS JU | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 238 de COMPROVANTES Service Abril.pdf | nome extraido: MARCOS VINICIUS C ROCHA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 239 de COMPROVANTES Service Abril.pdf | nome extraido: MARCUS AURELIO DA CONCEICAO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 240 de COMPROVANTES Service Abril.pdf | nome extraido: MARCUS VINICIUS DE SOUSA GON | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 241 de COMPROVANTES Service Abril.pdf | nome extraido: MARIA EDUARDA POLEZEL RISSI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 242 de COMPROVANTES Service Abril.pdf | nome extraido: MARIA EDUARDA TEODORO PERDIG | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 243 de COMPROVANTES Service Abril.pdf | nome extraido: MARIA FERNANDA PORTEL DO CAR | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 244 de COMPROVANTES Service Abril.pdf | nome extraido: MARIA VITORIA SILVERIO DA SI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 245 de COMPROVANTES Service Abril.pdf | nome extraido: MARINALDO CALUMBI JUNIOR | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 246 de COMPROVANTES Service Abril.pdf | nome extraido: MARIOLINO RODRIGUES DE SOUSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 247 de COMPROVANTES Service Abril.pdf | nome extraido: MARLENE VIEIRA DE SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 248 de COMPROVANTES Service Abril.pdf | nome extraido: MARLON CARMO DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 249 de COMPROVANTES Service Abril.pdf | nome extraido: Marlon Diogo Martins Martins | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 250 de COMPROVANTES Service Abril.pdf | nome extraido: MARLON HENRIQUE ACCORSINI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 251 de COMPROVANTES Service Abril.pdf | nome extraido: MARYAH MELHADO ALTAFIN | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 252 de COMPROVANTES Service Abril.pdf | nome extraido: MATEUS DE SOUSA BARBOSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 253 de COMPROVANTES Service Abril.pdf | nome extraido: Mateus Felipe Mendes Ferreir | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 254 de COMPROVANTES Service Abril.pdf | nome extraido: MATHEUS CAETANO NASCIMENTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 255 de COMPROVANTES Service Abril.pdf | nome extraido: MATHEUS CISKOSKI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 256 de COMPROVANTES Service Abril.pdf | nome extraido: MATHEUS MANSANO RODRIGUES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 257 de COMPROVANTES Service Abril.pdf | nome extraido: MATHEUS NUNES LIMA DE FRANCA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 258 de COMPROVANTES Service Abril.pdf | nome extraido: MATHEUS PEREIRA DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 259 de COMPROVANTES Service Abril.pdf | nome extraido: Matheus Portilho Faro | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 260 de COMPROVANTES Service Abril.pdf | nome extraido: MAURICIO DA SILVA OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 261 de COMPROVANTES Service Abril.pdf | nome extraido: MAURICIO JOAQUIM DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 262 de COMPROVANTES Service Abril.pdf | nome extraido: MAURICIO SANTOS DE OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 263 de COMPROVANTES Service Abril.pdf | nome extraido: MAX SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 264 de COMPROVANTES Service Abril.pdf | nome extraido: MAXUEL FLAVIO DO AMARAL | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 265 de COMPROVANTES Service Abril.pdf | nome extraido: MAYCON BRAZ NASCIMENTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 266 de COMPROVANTES Service Abril.pdf | nome extraido: MAYCON BRAZ NASCIMENTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 267 de COMPROVANTES Service Abril.pdf | nome extraido: MAYCON FERREIRA DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 268 de COMPROVANTES Service Abril.pdf | nome extraido: MICHAEL CARDOSO COELHO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 269 de COMPROVANTES Service Abril.pdf | nome extraido: Michael Douglas Santos Viana | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 270 de COMPROVANTES Service Abril.pdf | nome extraido: MILTON HENRIQUE MARTINS FERR | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 271 de COMPROVANTES Service Abril.pdf | nome extraido: MILTON REIS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 272 de COMPROVANTES Service Abril.pdf | nome extraido: MISAEL JOSE DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 273 de COMPROVANTES Service Abril.pdf | nome extraido: MURILO ALVES DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 274 de COMPROVANTES Service Abril.pdf | nome extraido: NADILSON FERREIRA DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 275 de COMPROVANTES Service Abril.pdf | nome extraido: NAIANY RODRIGUES SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 276 de COMPROVANTES Service Abril.pdf | nome extraido: NATALIA DAMAZIO SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 277 de COMPROVANTES Service Abril.pdf | nome extraido: Natan Ignacio Alves | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 278 de COMPROVANTES Service Abril.pdf | nome extraido: NATHAN LUCAS NOBRE FERREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 279 de COMPROVANTES Service Abril.pdf | nome extraido: NAYARA CRISTINA DA SILVA GON | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 280 de COMPROVANTES Service Abril.pdf | nome extraido: NAZARENO MORAES CARDOSO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 281 de COMPROVANTES Service Abril.pdf | nome extraido: NEIVALDO SOUZA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 282 de COMPROVANTES Service Abril.pdf | nome extraido: NELSON FERREIRA DE BARROS JU | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 283 de COMPROVANTES Service Abril.pdf | nome extraido: NELSON JOSE DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 284 de COMPROVANTES Service Abril.pdf | nome extraido: NERIALDO MACIEL RODRIGUES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 285 de COMPROVANTES Service Abril.pdf | nome extraido: NICOLE DUARTE GUIRARDELLI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 286 de COMPROVANTES Service Abril.pdf | nome extraido: NILSON PEREIRA LIMA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 287 de COMPROVANTES Service Abril.pdf | nome extraido: Ocinaldo Bandeira Silva | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 288 de COMPROVANTES Service Abril.pdf | nome extraido: ODAIR JOSE PEREIRA FILHO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 289 de COMPROVANTES Service Abril.pdf | nome extraido: Oldanias vitor dias fernande | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 290 de COMPROVANTES Service Abril.pdf | nome extraido: OSITA RODRIGUES DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 291 de COMPROVANTES Service Abril.pdf | nome extraido: OSMAR PEREIRA JUNIOR | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 292 de COMPROVANTES Service Abril.pdf | nome extraido: PABLO DIEGO LEITE MOTA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 293 de COMPROVANTES Service Abril.pdf | nome extraido: PATRICIO MARCOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 294 de COMPROVANTES Service Abril.pdf | nome extraido: PATRICK LUANN OLIVEIRA SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 295 de COMPROVANTES Service Abril.pdf | nome extraido: PATRIK LUAN ANTUNES DOS SANT | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 296 de COMPROVANTES Service Abril.pdf | nome extraido: Paula Gardenia De Freitas E | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 297 de COMPROVANTES Service Abril.pdf | nome extraido: PAULLA JURACIARA MARTINS PIN | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 298 de COMPROVANTES Service Abril.pdf | nome extraido: PAULO HENRIQUE CORDEIRO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 299 de COMPROVANTES Service Abril.pdf | nome extraido: PAULO HENRIQUE DA CONCEICAO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 300 de COMPROVANTES Service Abril.pdf | nome extraido: PAULO MODESTO SANTANA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 301 de COMPROVANTES Service Abril.pdf | nome extraido: PAULO PEDRO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 302 de COMPROVANTES Service Abril.pdf | nome extraido: PAULO ROSENO FERREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 303 de COMPROVANTES Service Abril.pdf | nome extraido: PAULO SERGIO CANALI MARCUSSI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 304 de COMPROVANTES Service Abril.pdf | nome extraido: PAULO VICENTE DE MOURA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 305 de COMPROVANTES Service Abril.pdf | nome extraido: PEDRO ANDRE DA SILVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 306 de COMPROVANTES Service Abril.pdf | nome extraido: PEDRO DE SOUSA COELHO JUNIOR | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 307 de COMPROVANTES Service Abril.pdf | nome extraido: PEDRO HENRIQUE BORTOLOTTI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 308 de COMPROVANTES Service Abril.pdf | nome extraido: Pedro Henrique de jesus | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 309 de COMPROVANTES Service Abril.pdf | nome extraido: PEDRO HENRIQUE SILVA SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 310 de COMPROVANTES Service Abril.pdf | nome extraido: PEDRO HENRIQUI DA SILVA SANT | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 311 de COMPROVANTES Service Abril.pdf | nome extraido: Pedro Maycon silva | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 312 de COMPROVANTES Service Abril.pdf | nome extraido: PEDRO MORENO DA COSTA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 313 de COMPROVANTES Service Abril.pdf | nome extraido: PEDRO RAYLON | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 314 de COMPROVANTES Service Abril.pdf | nome extraido: PEDRO VICTOR MIRANDA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 315 de COMPROVANTES Service Abril.pdf | nome extraido: PERICLES OLIVEIRA SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 316 de COMPROVANTES Service Abril.pdf | nome extraido: PETERSON FARIA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 317 de COMPROVANTES Service Abril.pdf | nome extraido: PHELLIPE RENNE SOUZA RODRIGU | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 318 de COMPROVANTES Service Abril.pdf | nome extraido: POLLYANA CARVALHO DE SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 319 de COMPROVANTES Service Abril.pdf | nome extraido: PRISCILA BATISTA DE ALMEIDA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 320 de COMPROVANTES Service Abril.pdf | nome extraido: PRISCILA INACIO BORGES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 321 de COMPROVANTES Service Abril.pdf | nome extraido: RAFAEL APARECIDO DAMASIO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 322 de COMPROVANTES Service Abril.pdf | nome extraido: RAFAEL AUGUSTO SOBREIRA DE L | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 323 de COMPROVANTES Service Abril.pdf | nome extraido: RAFAEL DE ALMEIDA RIBEIRO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 324 de COMPROVANTES Service Abril.pdf | nome extraido: RAFAEL FERREIRA GOMES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 325 de COMPROVANTES Service Abril.pdf | nome extraido: RAFAEL FREITAS QUINTINO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 326 de COMPROVANTES Service Abril.pdf | nome extraido: RAFAEL MEDEIROS DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 327 de COMPROVANTES Service Abril.pdf | nome extraido: RAFAEL SILVERIO DA ROCHA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 328 de COMPROVANTES Service Abril.pdf | nome extraido: RAFAEL SOARES DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 329 de COMPROVANTES Service Abril.pdf | nome extraido: RAFAEL TAVARES DE SOUSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 330 de COMPROVANTES Service Abril.pdf | nome extraido: RAFAELA CARNEIRO LOPES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 331 de COMPROVANTES Service Abril.pdf | nome extraido: RAIMUNDO ALVES DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 332 de COMPROVANTES Service Abril.pdf | nome extraido: RAIMUNDO CLEYTON DA SILVA FI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 333 de COMPROVANTES Service Abril.pdf | nome extraido: RAIMUNDO NONATO DA COSTA JUN | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 334 de COMPROVANTES Service Abril.pdf | nome extraido: RAIMUNDO VALDIVINO DE OLIVEI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 335 de COMPROVANTES Service Abril.pdf | nome extraido: RAMON LIMA DA ENCARNACAO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 336 de COMPROVANTES Service Abril.pdf | nome extraido: RANGEL DE JESUS MOREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 337 de COMPROVANTES Service Abril.pdf | nome extraido: RANIER BARBOSA DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 338 de COMPROVANTES Service Abril.pdf | nome extraido: RAUL OLIVEIRA RANUZZI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 339 de COMPROVANTES Service Abril.pdf | nome extraido: Rayane Cardoso Nunes | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 340 de COMPROVANTES Service Abril.pdf | nome extraido: REGINALDO APARECIDO PIO DOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 341 de COMPROVANTES Service Abril.pdf | nome extraido: REGINALDO DA SILVA MATOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 342 de COMPROVANTES Service Abril.pdf | nome extraido: Reginaldo de jesus Martins | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 343 de COMPROVANTES Service Abril.pdf | nome extraido: REGINALDO PEREIRA DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 344 de COMPROVANTES Service Abril.pdf | nome extraido: RENALDO FERREIRA DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 345 de COMPROVANTES Service Abril.pdf | nome extraido: RENAN OUEGRIO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 346 de COMPROVANTES Service Abril.pdf | nome extraido: RENDESON DE OLIVEIRA SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 347 de COMPROVANTES Service Abril.pdf | nome extraido: RENEE FERNANDO DE SOUZA VIND | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 348 de COMPROVANTES Service Abril.pdf | nome extraido: RICARDO CAETANO DE SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 349 de COMPROVANTES Service Abril.pdf | nome extraido: RIERES DAS SILVA LUIZ | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 350 de COMPROVANTES Service Abril.pdf | nome extraido: RIUSTON NAZARIO NUNES DA SIL | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 351 de COMPROVANTES Service Abril.pdf | nome extraido: RIVALDO DOS SANTOS RODRIGUES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 352 de COMPROVANTES Service Abril.pdf | nome extraido: Roberto Gabriel Pereira Card | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 353 de COMPROVANTES Service Abril.pdf | nome extraido: ROBERTO LOIOLA RIBEIRO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 354 de COMPROVANTES Service Abril.pdf | nome extraido: ROBIN WILIAN SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 355 de COMPROVANTES Service Abril.pdf | nome extraido: RODRIGO DO NASCIMENTO MELO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 356 de COMPROVANTES Service Abril.pdf | nome extraido: RODRIGO MARINHO ARAUJO SALES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 357 de COMPROVANTES Service Abril.pdf | nome extraido: RODRIGO SATOSHI NAGANO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 358 de COMPROVANTES Service Abril.pdf | nome extraido: ROMILSOM BARBOSA RAMOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 359 de COMPROVANTES Service Abril.pdf | nome extraido: RONALDO BARBOSA DE MOURA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 360 de COMPROVANTES Service Abril.pdf | nome extraido: RONEI PEREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 361 de COMPROVANTES Service Abril.pdf | nome extraido: ROSEMIRO ARLINDO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 362 de COMPROVANTES Service Abril.pdf | nome extraido: ROSIVAL FRANCISCO DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 363 de COMPROVANTES Service Abril.pdf | nome extraido: RUAN GONCALVES SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 364 de COMPROVANTES Service Abril.pdf | nome extraido: RULIO RAFFAEL DOS SANTOS MAC | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 365 de COMPROVANTES Service Abril.pdf | nome extraido: Ryan Gabriel Santana Gondim | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 366 de COMPROVANTES Service Abril.pdf | nome extraido: SABRINA NAIARA COSTA LIMA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 367 de COMPROVANTES Service Abril.pdf | nome extraido: SAMUEL CHRISTIANO KUGLER | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 368 de COMPROVANTES Service Abril.pdf | nome extraido: SAMUEL LIMA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 369 de COMPROVANTES Service Abril.pdf | nome extraido: Samuel Oliveira Da Silva | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 370 de COMPROVANTES Service Abril.pdf | nome extraido: SAVIO CARDOSO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 371 de COMPROVANTES Service Abril.pdf | nome extraido: SAVIO DA GUARDA SANTANA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 372 de COMPROVANTES Service Abril.pdf | nome extraido: SERGIO SIQUEIRA C JUNIOR | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 373 de COMPROVANTES Service Abril.pdf | nome extraido: SHEILA MARIA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 374 de COMPROVANTES Service Abril.pdf | nome extraido: SIDELMO AMERICO DE AMORIM FE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 375 de COMPROVANTES Service Abril.pdf | nome extraido: SIDINEI ANUNCIACAO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 376 de COMPROVANTES Service Abril.pdf | nome extraido: SIDINEIA DA SILVA SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 377 de COMPROVANTES Service Abril.pdf | nome extraido: SINDOMAR SANTOS E SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 378 de COMPROVANTES Service Abril.pdf | nome extraido: SINOMAR SOARES DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 379 de COMPROVANTES Service Abril.pdf | nome extraido: SINVAL LIMA DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 380 de COMPROVANTES Service Abril.pdf | nome extraido: SIRLEY DA COSTA SARGES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 381 de COMPROVANTES Service Abril.pdf | nome extraido: SIUMAR DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 382 de COMPROVANTES Service Abril.pdf | nome extraido: SODRE CARLOS DE SANTANA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 383 de COMPROVANTES Service Abril.pdf | nome extraido: SOLANGE APARECIDA DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 384 de COMPROVANTES Service Abril.pdf | nome extraido: TAFFAREL PEREIRA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 385 de COMPROVANTES Service Abril.pdf | nome extraido: TAISA KARINA ANTUNES DE SANT | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 386 de COMPROVANTES Service Abril.pdf | nome extraido: TALISON VAZ | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 387 de COMPROVANTES Service Abril.pdf | nome extraido: TAYNAH THAIS SILVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 388 de COMPROVANTES Service Abril.pdf | nome extraido: THALES FAVORETTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 389 de COMPROVANTES Service Abril.pdf | nome extraido: Thiago Dos santos | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 390 de COMPROVANTES Service Abril.pdf | nome extraido: THIAGO VALENTIM SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 391 de COMPROVANTES Service Abril.pdf | nome extraido: TIAGO COSTA DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 392 de COMPROVANTES Service Abril.pdf | nome extraido: TIAGO JAKSON DE RAMOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 393 de COMPROVANTES Service Abril.pdf | nome extraido: Tiago Mulinari Cicilioti | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 394 de COMPROVANTES Service Abril.pdf | nome extraido: TIAGO RODRIGUES SALES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 395 de COMPROVANTES Service Abril.pdf | nome extraido: TIAGO VALDECIR DOS SANTOS RE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 396 de COMPROVANTES Service Abril.pdf | nome extraido: UELTON DE LIMA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 397 de COMPROVANTES Service Abril.pdf | nome extraido: UENDEI DO ESPIRITO SANTO TRI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 398 de COMPROVANTES Service Abril.pdf | nome extraido: UERICON BENEDITO SOUSA CORRE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 399 de COMPROVANTES Service Abril.pdf | nome extraido: VAGNER SANTOS DE MELO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 400 de COMPROVANTES Service Abril.pdf | nome extraido: VALDEMIR ALVES DO NASCIMENTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 401 de COMPROVANTES Service Abril.pdf | nome extraido: VALDEMIR CORDEIRO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 402 de COMPROVANTES Service Abril.pdf | nome extraido: VALDENIR FERRAZ DO NASCIMENT | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 403 de COMPROVANTES Service Abril.pdf | nome extraido: VALDER DE SOUSA VIEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 404 de COMPROVANTES Service Abril.pdf | nome extraido: VALDINEI SANTOS DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 405 de COMPROVANTES Service Abril.pdf | nome extraido: VALDIR CARVALHO PEREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 406 de COMPROVANTES Service Abril.pdf | nome extraido: VALDIR FERREIRA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 407 de COMPROVANTES Service Abril.pdf | nome extraido: VALDIR MATOS VASCONCELOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 408 de COMPROVANTES Service Abril.pdf | nome extraido: VALMIR FRANCISCO DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 409 de COMPROVANTES Service Abril.pdf | nome extraido: VALMIR HONORIO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 410 de COMPROVANTES Service Abril.pdf | nome extraido: VALMIR MENDES DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 411 de COMPROVANTES Service Abril.pdf | nome extraido: VALTER ALVES NOGUEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 412 de COMPROVANTES Service Abril.pdf | nome extraido: VALTER FRANCISCO DE JESUS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 413 de COMPROVANTES Service Abril.pdf | nome extraido: VALTER LIRA DE OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 414 de COMPROVANTES Service Abril.pdf | nome extraido: VANDERSON BELMIRO PAIVA E SO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 415 de COMPROVANTES Service Abril.pdf | nome extraido: VANDIRCE NASCIMENTO DOS SANT | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 416 de COMPROVANTES Service Abril.pdf | nome extraido: VANDSON RAFAEL SILVEIRA RAMO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 417 de COMPROVANTES Service Abril.pdf | nome extraido: VERINALDO FRANCISCO DE FREIT | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 418 de COMPROVANTES Service Abril.pdf | nome extraido: VICENTE DE FREITAS EVANGELIS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 419 de COMPROVANTES Service Abril.pdf | nome extraido: VINICIUS ARAUJO SOARES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 420 de COMPROVANTES Service Abril.pdf | nome extraido: VINICIUS GONCALVES ROCHA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 421 de COMPROVANTES Service Abril.pdf | nome extraido: VINICIUS REIS STRASS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 422 de COMPROVANTES Service Abril.pdf | nome extraido: VINICIUS SALLES PUPO MRTVI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 423 de COMPROVANTES Service Abril.pdf | nome extraido: VINICIUS TADASHI HACHIYA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 424 de COMPROVANTES Service Abril.pdf | nome extraido: Vitor Henrique Santiago | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 425 de COMPROVANTES Service Abril.pdf | nome extraido: VITOR HUGO PROENCIO MARTINS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 426 de COMPROVANTES Service Abril.pdf | nome extraido: VITOR MONTEIRO FERREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 427 de COMPROVANTES Service Abril.pdf | nome extraido: VITOR PELEGRINI DO CARMO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 428 de COMPROVANTES Service Abril.pdf | nome extraido: VITORIO FRANCISCO PEREIRA DE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 429 de COMPROVANTES Service Abril.pdf | nome extraido: VIVIAN FUNARI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 430 de COMPROVANTES Service Abril.pdf | nome extraido: WAGNER VIEIRA DE BRITO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 431 de COMPROVANTES Service Abril.pdf | nome extraido: WALISSON DE FARIAS RODRIGUES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 432 de COMPROVANTES Service Abril.pdf | nome extraido: WALTER LUIZ DOS SANTOS FILHO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 433 de COMPROVANTES Service Abril.pdf | nome extraido: WANDERSON ALVES SIQUEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 434 de COMPROVANTES Service Abril.pdf | nome extraido: WANDERSON SOUSA DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 435 de COMPROVANTES Service Abril.pdf | nome extraido: WELISON PEREIRA DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 436 de COMPROVANTES Service Abril.pdf | nome extraido: WELLINGTON ANTONIO RODRIGUES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 437 de COMPROVANTES Service Abril.pdf | nome extraido: WELLINGTON ANTONIO RODRIGUES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 438 de COMPROVANTES Service Abril.pdf | nome extraido: WELLINGTON DE JESUS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 439 de COMPROVANTES Service Abril.pdf | nome extraido: WELLINGTON LEVI RIBEIRO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 440 de COMPROVANTES Service Abril.pdf | nome extraido: WELLINGTON RIBEIRO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 441 de COMPROVANTES Service Abril.pdf | nome extraido: WELLINTON PEREIRA SOBRINHO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 442 de COMPROVANTES Service Abril.pdf | nome extraido: WENDERSON LOPES DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 443 de COMPROVANTES Service Abril.pdf | nome extraido: WESLEY ALVES DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 444 de COMPROVANTES Service Abril.pdf | nome extraido: WESLEY DE JESUS DE QUEIROZ | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 445 de COMPROVANTES Service Abril.pdf | nome extraido: WESLEY JOSE DE SOUSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 446 de COMPROVANTES Service Abril.pdf | nome extraido: WILKER BEZERRA SOUSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 447 de COMPROVANTES Service Abril.pdf | nome extraido: WILKSON MANUEL SANTANA DA SI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 448 de COMPROVANTES Service Abril.pdf | nome extraido: WINICIUS ALVES DIAS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 449 de COMPROVANTES Service Abril.pdf | nome extraido: WYLKELSON RODRIGUES DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 450 de COMPROVANTES Service Abril.pdf | nome extraido: YURY CRISSON SILVA SOARES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 451 de COMPROVANTES Service Abril.pdf | nome extraido: ZANDER DOS SANTOS FERNANDES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 452 de COMPROVANTES Service Abril.pdf | nome extraido: ADRIANO PAULO SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 453 de COMPROVANTES Service Abril.pdf | nome extraido: ANTONIO CLAUDIO CORREA ORNELAS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 454 de COMPROVANTES Service Abril.pdf | nome extraido: BRUNO MACEDO ALVES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 455 de COMPROVANTES Service Abril.pdf | nome extraido: FABRICIO HERCULANO M DE SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 456 de COMPROVANTES Service Abril.pdf | nome extraido: FRANCISCO LAURO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 457 de COMPROVANTES Service Abril.pdf | nome extraido: GEORGE MARIO PEREIRA DE SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 458 de COMPROVANTES Service Abril.pdf | nome extraido: HELDER DIAS DE OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 459 de COMPROVANTES Service Abril.pdf | nome extraido: ISMAEL CARLOS ARAUJO CARVALHO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 460 de COMPROVANTES Service Abril.pdf | nome extraido: JOAO VICTOR AZEVEDO D SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 461 de COMPROVANTES Service Abril.pdf | nome extraido: JOSE DIEGO FONSECA LIMA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 462 de COMPROVANTES Service Abril.pdf | nome extraido: KERCY JHONY FERREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 463 de COMPROVANTES Service Abril.pdf | nome extraido: LUCAS EDUARDO FERREIRA FROZ | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 464 de COMPROVANTES Service Abril.pdf | nome extraido: LUIZ HENRIQUE SOUZA PEREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 465 de COMPROVANTES Service Abril.pdf | nome extraido: MILTON CESAR DA SILVA SOBRAL | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 466 de COMPROVANTES Service Abril.pdf | nome extraido: PABLO HENRIQUE FERNANDES RAMOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 467 de COMPROVANTES Service Abril.pdf | nome extraido: RAFAEL PAULA DE SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 468 de COMPROVANTES Service Abril.pdf | nome extraido: RICHER IGOR CARVALHO PIO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 469 de COMPROVANTES Service Abril.pdf | nome extraido: SAVIO RIAN SILVA FERREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 470 de COMPROVANTES Service Abril.pdf | nome extraido: VANILSON SOARES PEREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 471 de COMPROVANTES Service Abril.pdf | nome extraido: WALTER RODRIGUES PEREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 472 de COMPROVANTES Service Abril.pdf | nome extraido: ZIRINELSON DOS SANTOS GALVAO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 473 de COMPROVANTES Service Abril.pdf | nome extraido: MSE SERVICE - SERVICOS E MANUT | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 474 de COMPROVANTES Service Abril.pdf | nome extraido: MSE SERVICE - SERVICOS E MANUT | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 475 de COMPROVANTES Service Abril.pdf | nome extraido: MAYCON BRAZ NASCIMENTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 476 de COMPROVANTES Service Abril.pdf | nome extraido: MSE SERVICE - SERVICOS E MANUT | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 477 de COMPROVANTES Service Abril.pdf | nome extraido: VALDER DE SOUSA VIEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 478 de COMPROVANTES Service Abril.pdf | nome extraido: WAGNER MATEUS GONCALVES SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 479 de COMPROVANTES Service Abril.pdf | nome extraido: ADAILSON PEREIRA DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 480 de COMPROVANTES Service Abril.pdf | nome extraido: ADAILTON DOMINGOS SANTOS DA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 481 de COMPROVANTES Service Abril.pdf | nome extraido: ADAILTON MIRANDA DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 482 de COMPROVANTES Service Abril.pdf | nome extraido: ADAO RODRIGUES NOGUEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 483 de COMPROVANTES Service Abril.pdf | nome extraido: ADILSON DE OLIVEIRA SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 484 de COMPROVANTES Service Abril.pdf | nome extraido: ADRIAN GABRIEL FREITAS SANTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 485 de COMPROVANTES Service Abril.pdf | nome extraido: AGUINALDO RODRIGUES DE SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 486 de COMPROVANTES Service Abril.pdf | nome extraido: ALAN JHONATAN DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 487 de COMPROVANTES Service Abril.pdf | nome extraido: ALBERT VICENTE ZAMBELLO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 488 de COMPROVANTES Service Abril.pdf | nome extraido: ALDERIVAN DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 489 de COMPROVANTES Service Abril.pdf | nome extraido: ALEFE MISURA BENTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 490 de COMPROVANTES Service Abril.pdf | nome extraido: ALEJANDRO SERRA DA ROCHA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 491 de COMPROVANTES Service Abril.pdf | nome extraido: ALESSANDRA DA SILVA ASSEN | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 492 de COMPROVANTES Service Abril.pdf | nome extraido: ALESSANDRO DE SOUSA FERREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 493 de COMPROVANTES Service Abril.pdf | nome extraido: ALESSANDRO DOS SANTOS ALVES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 494 de COMPROVANTES Service Abril.pdf | nome extraido: Alessandro Dos Santos Silva | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 495 de COMPROVANTES Service Abril.pdf | nome extraido: ALEX LIMA DE FARIAS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 496 de COMPROVANTES Service Abril.pdf | nome extraido: ALEX VILA NOVA DE SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 497 de COMPROVANTES Service Abril.pdf | nome extraido: ALEXANDRE FARIAS DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 498 de COMPROVANTES Service Abril.pdf | nome extraido: ALEXANDRE JOSE DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 499 de COMPROVANTES Service Abril.pdf | nome extraido: ALEXANDRE NASCIMENTO PEREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 500 de COMPROVANTES Service Abril.pdf | nome extraido: ALEXANDRE RODRIGUES CONCEICA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 501 de COMPROVANTES Service Abril.pdf | nome extraido: ALEXANDRE SIQUEIRA AMARO BRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 502 de COMPROVANTES Service Abril.pdf | nome extraido: ALEXSANDRO DE FRANCA BEZERRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 503 de COMPROVANTES Service Abril.pdf | nome extraido: Altemar Dutra Cardoso | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 504 de COMPROVANTES Service Abril.pdf | nome extraido: ALVARO DA SILVA FRANCA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 505 de COMPROVANTES Service Abril.pdf | nome extraido: ANA BEATRIZ DALLA TORRE TELE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 506 de COMPROVANTES Service Abril.pdf | nome extraido: ANA CAROLINA PIMENTA LOUREIR | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 507 de COMPROVANTES Service Abril.pdf | nome extraido: ANA PAULA GEROLIM SALVADOR | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 508 de COMPROVANTES Service Abril.pdf | nome extraido: ANDERSON DOS SANTOS SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 509 de COMPROVANTES Service Abril.pdf | nome extraido: ANDERSON PEREIRA RAMOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 510 de COMPROVANTES Service Abril.pdf | nome extraido: ANDRE APARECIDO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 511 de COMPROVANTES Service Abril.pdf | nome extraido: ANDRE GONCALVES DO NASCIMENT | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 512 de COMPROVANTES Service Abril.pdf | nome extraido: ANDRE MACIEL ALMEIDA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 513 de COMPROVANTES Service Abril.pdf | nome extraido: ANDRE MATHEUS DINIZ ALVES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 514 de COMPROVANTES Service Abril.pdf | nome extraido: ANGELO ESTEVAM AIRES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 515 de COMPROVANTES Service Abril.pdf | nome extraido: ANIVANIO FERREIRA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 516 de COMPROVANTES Service Abril.pdf | nome extraido: ANNA LUIZA DE OLIVEIRA MENDE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 517 de COMPROVANTES Service Abril.pdf | nome extraido: ANSELMO GOMES DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 518 de COMPROVANTES Service Abril.pdf | nome extraido: ANTHONY DA SILVA RIBEIRO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 519 de COMPROVANTES Service Abril.pdf | nome extraido: ANTONIO ARAUJO DOS REIS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 520 de COMPROVANTES Service Abril.pdf | nome extraido: ANTONIO H LUZ | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 521 de COMPROVANTES Service Abril.pdf | nome extraido: ANTONIO JEFERSON PEREIRA DE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 522 de COMPROVANTES Service Abril.pdf | nome extraido: ANTONIO JOSE SILVA DE SOUSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 523 de COMPROVANTES Service Abril.pdf | nome extraido: Antonio Junior Viana Dos San | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 524 de COMPROVANTES Service Abril.pdf | nome extraido: ANTONIO MACARIO PEREIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 525 de COMPROVANTES Service Abril.pdf | nome extraido: ANTONIO VALMILDE F COELHO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 526 de COMPROVANTES Service Abril.pdf | nome extraido: ANTONIO VANDERSON LIRA DE OL | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 527 de COMPROVANTES Service Abril.pdf | nome extraido: ANTONIO WARLEI SILVA BARBOSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 528 de COMPROVANTES Service Abril.pdf | nome extraido: ANTONY MATHEUS DA CONCEICAO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 529 de COMPROVANTES Service Abril.pdf | nome extraido: ARIAS MATOS BRITO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 530 de COMPROVANTES Service Abril.pdf | nome extraido: ARIOSVALDO DE JESUS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 531 de COMPROVANTES Service Abril.pdf | nome extraido: ARNALDO JOSE DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 532 de COMPROVANTES Service Abril.pdf | nome extraido: BEATRIZ DORNELAS ALLI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 533 de COMPROVANTES Service Abril.pdf | nome extraido: BENEDITO LACERDA DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 534 de COMPROVANTES Service Abril.pdf | nome extraido: BRENNO PEREIRA ABRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 535 de COMPROVANTES Service Abril.pdf | nome extraido: BRENO ALBUQUERQUE RIBEIRO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 536 de COMPROVANTES Service Abril.pdf | nome extraido: BRENO PIZA MARIANO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 537 de COMPROVANTES Service Abril.pdf | nome extraido: Bruna Alcantara Bernardes Ja | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 538 de COMPROVANTES Service Abril.pdf | nome extraido: BRUNA ARAUJO DE OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 539 de COMPROVANTES Service Abril.pdf | nome extraido: Bruno Estevao Luz | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 540 de COMPROVANTES Service Abril.pdf | nome extraido: BRUNO HENRIQUE CHAGAS DA SIL | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 541 de COMPROVANTES Service Abril.pdf | nome extraido: BRUNO MANOEL DOS SANTOS LIMA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 542 de COMPROVANTES Service Abril.pdf | nome extraido: Caio canonico da silva | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 543 de COMPROVANTES Service Abril.pdf | nome extraido: CAIO SILVA ANELI MARTINS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 544 de COMPROVANTES Service Abril.pdf | nome extraido: CAIO WILLIAN MADRUGA CORREA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 545 de COMPROVANTES Service Abril.pdf | nome extraido: CAIQUE PAIVA MORIMOTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 546 de COMPROVANTES Service Abril.pdf | nome extraido: CARLOS AFONSO PEREIRA LIMA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 547 de COMPROVANTES Service Abril.pdf | nome extraido: CARLOS ALBERTO CARVALHO FONS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 548 de COMPROVANTES Service Abril.pdf | nome extraido: CARLOS ALBERTO CIRILO DA SIL | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 549 de COMPROVANTES Service Abril.pdf | nome extraido: CARLOS ALBERTO DIAS MARTINS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 550 de COMPROVANTES Service Abril.pdf | nome extraido: CARLOS ALBERTO DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 551 de COMPROVANTES Service Abril.pdf | nome extraido: CARLOS ALBINO BARBOSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 552 de COMPROVANTES Service Abril.pdf | nome extraido: CARLOS ALEXANDRE LOPES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 553 de COMPROVANTES Service Abril.pdf | nome extraido: Carlos Andre Ferreira Da Sil | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 554 de COMPROVANTES Service Abril.pdf | nome extraido: CARLOS EWERSON CARDOSO PINHE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 555 de COMPROVANTES Service Abril.pdf | nome extraido: CARLOS RAFAEL BARBOSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 556 de COMPROVANTES Service Abril.pdf | nome extraido: CARLOS RAFAEL LIMA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 557 de COMPROVANTES Service Abril.pdf | nome extraido: CASSIANO JOSE DA SILVA NETO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 558 de COMPROVANTES Service Abril.pdf | nome extraido: CASSIO BARBOSA SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 559 de COMPROVANTES Service Abril.pdf | nome extraido: CASSIO CARDOSO DE SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 560 de COMPROVANTES Service Abril.pdf | nome extraido: Caua Victor | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 561 de COMPROVANTES Service Abril.pdf | nome extraido: CELSO RODRIGUES JUNIOR | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 562 de COMPROVANTES Service Abril.pdf | nome extraido: CHARLES AUGUSTO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 563 de COMPROVANTES Service Abril.pdf | nome extraido: CHARLISE REGINA IGNACIO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 564 de COMPROVANTES Service Abril.pdf | nome extraido: CLAUDIO ADAO SOUSA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 565 de COMPROVANTES Service Abril.pdf | nome extraido: CLAUDIO GUSTAVO FERREIRA DA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 566 de COMPROVANTES Service Abril.pdf | nome extraido: CLAUDIO ROCHA DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 567 de COMPROVANTES Service Abril.pdf | nome extraido: CLAYTON DO NASCIMENTO RAMOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 568 de COMPROVANTES Service Abril.pdf | nome extraido: CLEBER DA SILVA SIMOES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 569 de COMPROVANTES Service Abril.pdf | nome extraido: CLEBER SAMUEL AVELINO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 570 de COMPROVANTES Service Abril.pdf | nome extraido: CLEISON CONCEICAO SANTANA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 571 de COMPROVANTES Service Abril.pdf | nome extraido: CLEITON MACHADO MEIRELES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 572 de COMPROVANTES Service Abril.pdf | nome extraido: COSME RAIMUNDO DE ARGOLO SAM | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 573 de COMPROVANTES Service Abril.pdf | nome extraido: CRISTIAN TEIXEIRA DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 574 de COMPROVANTES Service Abril.pdf | nome extraido: CRISTIANO FERREIRA DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 575 de COMPROVANTES Service Abril.pdf | nome extraido: Daiane Ribeiro da Silva | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 576 de COMPROVANTES Service Abril.pdf | nome extraido: DAMIAO FAUSTINO LEITE | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 577 de COMPROVANTES Service Abril.pdf | nome extraido: DAMIAO PEDRO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 578 de COMPROVANTES Service Abril.pdf | nome extraido: DANIEL ABREU DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 579 de COMPROVANTES Service Abril.pdf | nome extraido: DANIEL SOUZA DE OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 580 de COMPROVANTES Service Abril.pdf | nome extraido: DANIELA CAETANO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 581 de COMPROVANTES Service Abril.pdf | nome extraido: DANIELA MARTINS CAPPUCCIO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 582 de COMPROVANTES Service Abril.pdf | nome extraido: DANIELE MARINHO DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 583 de COMPROVANTES Service Abril.pdf | nome extraido: DANILO DE CARVALHO SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 584 de COMPROVANTES Service Abril.pdf | nome extraido: DANILO DE SOUZA RODRIGUES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 585 de COMPROVANTES Service Abril.pdf | nome extraido: DARCI JOSE KASPERSKI LEMES D | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 586 de COMPROVANTES Service Abril.pdf | nome extraido: Darlan De Oliveira Souza | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 587 de COMPROVANTES Service Abril.pdf | nome extraido: Davi Luan Alves Leal | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 588 de COMPROVANTES Service Abril.pdf | nome extraido: DAVID BRUNO ALEXANDRE DE LIM | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 589 de COMPROVANTES Service Abril.pdf | nome extraido: DAVID GOMES DE LIMA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 590 de COMPROVANTES Service Abril.pdf | nome extraido: DEIVID FREITAS DOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 591 de COMPROVANTES Service Abril.pdf | nome extraido: DEIVID THIAGO MIRANDA MATOSO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 592 de COMPROVANTES Service Abril.pdf | nome extraido: DEIVIDIS FELICIO FERNANDES | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 593 de COMPROVANTES Service Abril.pdf | nome extraido: DENILSON FRANCELINO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 594 de COMPROVANTES Service Abril.pdf | nome extraido: DENILSON ROSA DE AMORIM | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 595 de COMPROVANTES Service Abril.pdf | nome extraido: DENIVAL FABRES MARTINS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 596 de COMPROVANTES Service Abril.pdf | nome extraido: DENNIS BARBOSA LIMA | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 597 de COMPROVANTES Service Abril.pdf | nome extraido: DIEGO ANDRE PINCELLI | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 598 de COMPROVANTES Service Abril.pdf | nome extraido: DIEGO ANDRELINO CUSTODIO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 599 de COMPROVANTES Service Abril.pdf | nome extraido: DIEGO COUTINHO CAMPOS DE SEN | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 600 de COMPROVANTES Service Abril.pdf | nome extraido: DIEGO DE CARVALHO SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 601 de COMPROVANTES Service Abril.pdf | nome extraido: DIEGO DOS SANTOS BENTO | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 602 de COMPROVANTES Service Abril.pdf | nome extraido: DIEGO GOMES DE JESUS | metodo: regex_flexivel
+2026-05-29 10:33:23 | INFO | Pagina 603 de COMPROVANTES Service Abril.pdf | nome extraido: DIEGO JARDIM RIGATTI | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 604 de COMPROVANTES Service Abril.pdf | nome extraido: Diego Maciel de Sousa | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 605 de COMPROVANTES Service Abril.pdf | nome extraido: DIEMISSON HIGOR DIAS SILVA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 606 de COMPROVANTES Service Abril.pdf | nome extraido: DIOGO DOS SANTOS LISBOA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 607 de COMPROVANTES Service Abril.pdf | nome extraido: DIOGO GOMES DE OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 608 de COMPROVANTES Service Abril.pdf | nome extraido: DIOGO PEREIRA DE CARVALHO | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 609 de COMPROVANTES Service Abril.pdf | nome extraido: DIONE SANTOS SILVA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 610 de COMPROVANTES Service Abril.pdf | nome extraido: DJALMA SOUZA VICENTE | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 611 de COMPROVANTES Service Abril.pdf | nome extraido: DOUGLAS MENESES DE SOUSA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 612 de COMPROVANTES Service Abril.pdf | nome extraido: DOUGLAS ODAIR FERREIRA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 613 de COMPROVANTES Service Abril.pdf | nome extraido: ED FARIAS PEREIRA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 614 de COMPROVANTES Service Abril.pdf | nome extraido: EDENILDO GONCALVES PEREIRA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 615 de COMPROVANTES Service Abril.pdf | nome extraido: EDENILSON DE OLIVEIRA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 616 de COMPROVANTES Service Abril.pdf | nome extraido: EDILSON GONCALVES DE SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 617 de COMPROVANTES Service Abril.pdf | nome extraido: EDIMARCOS EDNALDO | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 618 de COMPROVANTES Service Abril.pdf | nome extraido: EDINALDO RODRIGUES FREITAS | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 619 de COMPROVANTES Service Abril.pdf | nome extraido: EDMAR EVANGELISTA DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 620 de COMPROVANTES Service Abril.pdf | nome extraido: EDSON LUIS SOBIS | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 621 de COMPROVANTES Service Abril.pdf | nome extraido: EDSON SALOMAO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 622 de COMPROVANTES Service Abril.pdf | nome extraido: EDUARDO PACATONIO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 623 de COMPROVANTES Service Abril.pdf | nome extraido: EDUARDO SILVA DE ALBUQUERQUE | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 624 de COMPROVANTES Service Abril.pdf | nome extraido: ELI APARECIDO COSTA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 625 de COMPROVANTES Service Abril.pdf | nome extraido: ELIELSON FERREIRA LIMA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 626 de COMPROVANTES Service Abril.pdf | nome extraido: ELINALDO RODRIGUES DOS SANTO | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 627 de COMPROVANTES Service Abril.pdf | nome extraido: ELIVAN BARBOSA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 628 de COMPROVANTES Service Abril.pdf | nome extraido: ELIZANGELA LIMA SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 629 de COMPROVANTES Service Abril.pdf | nome extraido: EMANUEL DE JESUS CARVALHO DO | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 630 de COMPROVANTES Service Abril.pdf | nome extraido: Emauron Garcia Novaes | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 631 de COMPROVANTES Service Abril.pdf | nome extraido: EMERSON CARDOSO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 632 de COMPROVANTES Service Abril.pdf | nome extraido: EMERSON WESLEY DA SILVA SOUZ | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 633 de COMPROVANTES Service Abril.pdf | nome extraido: ERIK RENAN CARDOSO DOS SANTO | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 634 de COMPROVANTES Service Abril.pdf | nome extraido: ERISVALDO ROCHA COSTA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 635 de COMPROVANTES Service Abril.pdf | nome extraido: ERISVELTON PEREIRA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 636 de COMPROVANTES Service Abril.pdf | nome extraido: ESDRAS FELIPE DE SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 637 de COMPROVANTES Service Abril.pdf | nome extraido: EUDES DIEGO MATHEUS MENDES D | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 638 de COMPROVANTES Service Abril.pdf | nome extraido: EUDOS SILVA SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 639 de COMPROVANTES Service Abril.pdf | nome extraido: EVANGIVALDO ARAUJO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 640 de COMPROVANTES Service Abril.pdf | nome extraido: EVANILDO DE JESUS SOUZA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 641 de COMPROVANTES Service Abril.pdf | nome extraido: EVERALDO JOSE DOS SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 642 de COMPROVANTES Service Abril.pdf | nome extraido: EVERALDO PEREIRA DE PASSOS | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 643 de COMPROVANTES Service Abril.pdf | nome extraido: EZEQUIAS SOARES FAGUNDES | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 644 de COMPROVANTES Service Abril.pdf | nome extraido: FABIANO GOMES DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 645 de COMPROVANTES Service Abril.pdf | nome extraido: FABIO AURELIO JUNIO LOPES | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 646 de COMPROVANTES Service Abril.pdf | nome extraido: FABIO DIAS FERREIRA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 647 de COMPROVANTES Service Abril.pdf | nome extraido: FABIO GABRIEL GOMES SANTANA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 648 de COMPROVANTES Service Abril.pdf | nome extraido: FABRICIA DOS SANTOS DA COSTA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 649 de COMPROVANTES Service Abril.pdf | nome extraido: FABRICIO DA ROCHA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 650 de COMPROVANTES Service Abril.pdf | nome extraido: FARLEY ADRIANO VASCONCELOS | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 651 de COMPROVANTES Service Abril.pdf | nome extraido: FELIPE DAVID MARTINS | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 652 de COMPROVANTES Service Abril.pdf | nome extraido: FELIPE FREITAS AMORIM DOS SA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 653 de COMPROVANTES Service Abril.pdf | nome extraido: FELIPE KAUA MARTINS FERREIRA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 654 de COMPROVANTES Service Abril.pdf | nome extraido: FELIPE SANTOS | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 655 de COMPROVANTES Service Abril.pdf | nome extraido: FELIPE TARRAGO DA ROSA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 656 de COMPROVANTES Service Abril.pdf | nome extraido: FERNANDA DA SILVA MACIEL | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 657 de COMPROVANTES Service Abril.pdf | nome extraido: FERNANDA MARTINS | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 658 de COMPROVANTES Service Abril.pdf | nome extraido: FERNANDA MIKA FURUSHO | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 659 de COMPROVANTES Service Abril.pdf | nome extraido: FERNANDO BUENO DE ARAUJO | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 660 de COMPROVANTES Service Abril.pdf | nome extraido: FERNANDO COELHO DO NASCIMENT | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 661 de COMPROVANTES Service Abril.pdf | nome extraido: FERNANDO GONCALVES DE SOUSA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 662 de COMPROVANTES Service Abril.pdf | nome extraido: FERNANDO HENRIQUE GOMES DOS | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 663 de COMPROVANTES Service Abril.pdf | nome extraido: FERNANDO LUIS DE LIMA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 664 de COMPROVANTES Service Abril.pdf | nome extraido: FERNANDO MATOS BRITO | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 665 de COMPROVANTES Service Abril.pdf | nome extraido: Fernando Seabra De Araujo | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 666 de COMPROVANTES Service Abril.pdf | nome extraido: FILIPE DE SOUSA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 667 de COMPROVANTES Service Abril.pdf | nome extraido: FILIPE RODRIGUES MARTINS | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 668 de COMPROVANTES Service Abril.pdf | nome extraido: FLAVIO DE CARVALHO COSTA JR | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 669 de COMPROVANTES Service Abril.pdf | nome extraido: Flavio Mateus De Melo Santan | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 670 de COMPROVANTES Service Abril.pdf | nome extraido: FLAVIO SILVA MERENCA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 671 de COMPROVANTES Service Abril.pdf | nome extraido: FRANCIMARLEN PEDRO DA SILVA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 672 de COMPROVANTES Service Abril.pdf | nome extraido: FRANCISCO ADRIANO DE SOUSA S | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 673 de COMPROVANTES Service Abril.pdf | nome extraido: FRANCISCO ANTONIO ALVES DA S | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 674 de COMPROVANTES Service Abril.pdf | nome extraido: FRANCISCO AUGUSTO MAIMONE DE | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 675 de COMPROVANTES Service Abril.pdf | nome extraido: FRANCISCO EDIVAR RODRIGUES | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 676 de COMPROVANTES Service Abril.pdf | nome extraido: Francisco Gabriel Soares | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 677 de COMPROVANTES Service Abril.pdf | nome extraido: FRANCISCO GERALDO DA SILVA N | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Pagina 678 de COMPROVANTES Service Abril.pdf | nome extraido: FRANCISCO GERSON PAZ SILVA | metodo: regex_flexivel
+2026-05-29 10:33:24 | INFO | Nomes via fallback pypdf: 0 | nomes via database apoio: 0
+2026-05-29 10:33:24 | INFO | Total de paginas processadas no database: 678
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ADAILSON PEREIRA DA SILVA | comprovante: ADAILSON PEREIRA DA SILVA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ADRIAN GABRIEL FREITAS SANTOS | comprovante: ADRIAN GABRIEL FREITAS SANTO | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ALESSANDRO DOS SANTOS ALVES | comprovante: ALESSANDRO DOS SANTOS ALVES | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ALESSANDRO DOS SANTOS SILVA | comprovante: Alessandro Dos Santos Silva | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ALEXANDRE FARIAS DA SILVA | comprovante: ALEXANDRE FARIAS DA SILVA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ALTEMAR DUTRA CARDOSO | comprovante: Altemar Dutra Cardoso | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ANDRE MACIEL ALMEIDA | comprovante: ANDRE MACIEL ALMEIDA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ANDRE MATHEUS DINIZ ALVES | comprovante: ANDRE MATHEUS DINIZ ALVES | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ANSELMO GOMES DA SILVA | comprovante: ANSELMO GOMES DA SILVA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ANTONIO HENDERSON LUZ | comprovante: ANTONIO H LUZ | score: 93.30
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ANTONIO JEFERSON PEREIRA DE SOUSA | comprovante: ANTONIO JEFERSON PEREIRA DE | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ANTONIO MACARIO PEREIRA | comprovante: ANTONIO MACARIO PEREIRA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ANTONIO VANDERSON LIRA DE OLIVEIRA | comprovante: ANTONIO VANDERSON LIRA DE OL | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ANTONIO WARLEI SILVA BARBOSA | comprovante: ANTONIO WARLEI SILVA BARBOSA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ARIAS MATOS BRITO | comprovante: ARIAS MATOS BRITO | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ARIOSVALDO DE JESUS | comprovante: ARIOSVALDO DE JESUS | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: BRUNO MANOEL DOS SANTOS LIMA | comprovante: BRUNO MANOEL DOS SANTOS LIMA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: CARLOS AFONSO PEREIRA LIMA | comprovante: CARLOS AFONSO PEREIRA LIMA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: CARLOS ALBERTO CARVALHO FONSECA | comprovante: CARLOS ALBERTO CARVALHO FONS | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: CARLOS ALBERTO DOS SANTOS | comprovante: CARLOS ALBERTO DOS SANTOS | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: CARLOS ALBINO BARBOSA | comprovante: CARLOS ALBINO BARBOSA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: CARLOS ANDRE FERREIRA DA SILVA | comprovante: Carlos Andre Ferreira Da Sil | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: CASSIO CARDOSO DE SOUZA | comprovante: CASSIO CARDOSO DE SOUZA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: CAUA VICTOR FONSECA E AZEVEDO | comprovante: Caua Victor | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: CLAUDIO GUSTAVO FERREIRA DA SILVA | comprovante: CLAUDIO GUSTAVO FERREIRA DA | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: CLAYTON DO NASCIMENTO RAMOS | comprovante: CLAYTON DO NASCIMENTO RAMOS | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: CRISTIANO FERREIRA DA SILVA | comprovante: CRISTIANO FERREIRA DA SILVA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: DANIEL SOUZA DE OLIVEIRA | comprovante: DANIEL SOUZA DE OLIVEIRA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: DANILO DE CARVALHO SILVA | comprovante: DANILO DE CARVALHO SILVA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: DANILO DE SOUZA RODRIGUES | comprovante: DANILO DE SOUZA RODRIGUES | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: DAVID BRUNO ALEXANDRE DE LIMA | comprovante: DAVID BRUNO ALEXANDRE DE LIM | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: DIEGO DE CARVALHO SANTOS | comprovante: DIEGO DE CARVALHO SANTOS | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: DIEGO GOMES DE JESUS | comprovante: DIEGO GOMES DE JESUS | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: DIEGO MACIEL DE SOUSA | comprovante: Diego Maciel de Sousa | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: DIOGO GOMES DE OLIVEIRA | comprovante: DIOGO GOMES DE OLIVEIRA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: DIOGO PEREIRA DE CARVALHO | comprovante: DIOGO PEREIRA DE CARVALHO | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: DOUGLAS MENESES DE SOUSA | comprovante: DOUGLAS MENESES DE SOUSA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ED FARIAS PEREIRA | comprovante: ED FARIAS PEREIRA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: EDENILDO GONÇALVES PEREIRA | comprovante: EDENILDO GONCALVES PEREIRA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: EDINALDO RODRIGUES FREITAS | comprovante: EDINALDO RODRIGUES FREITAS | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: EDSON LUIS SOBIS | comprovante: EDSON LUIS SOBIS | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: EMERSON CARDOSO DA SILVA | comprovante: EMERSON CARDOSO DA SILVA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ERIK RENAN CARDOSO DOS SANTOS | comprovante: ERIK RENAN CARDOSO DOS SANTO | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: ERISVELTON PEREIRA NASCIMENTO | comprovante: ERISVELTON PEREIRA | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: EVANGIVALDO ARAUJO DA SILVA | comprovante: EVANGIVALDO ARAUJO DA SILVA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: EVERALDO PEREIRA DE PASSOS | comprovante: EVERALDO PEREIRA DE PASSOS | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: FABIO AURELIO JUNIO LOPES | comprovante: FABIO AURELIO JUNIO LOPES | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: FABRICIO HERCULANO MINEIRO | comprovante: FABRICIO HERCULANO M DE SOUZA | score: 82.80
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: FARLEY ADRIANO VASCONCELOS E SILVA | comprovante: FARLEY ADRIANO VASCONCELOS | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: FELIPE FREITAS AMORIM DOS SANTOS | comprovante: FELIPE FREITAS AMORIM DOS SA | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: FERNANDO SEABRA DE ARAUJO | comprovante: Fernando Seabra De Araujo | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: FRANCIMARLEN PEDRO DA SILVA | comprovante: FRANCIMARLEN PEDRO DA SILVA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: FRANCISCO ADRIANO DE SOUSA SILVA | comprovante: FRANCISCO ADRIANO DE SOUSA S | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: FRANCISCO ANTONIO ALVES DA SILVA | comprovante: FRANCISCO ANTONIO ALVES DA S | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: FRANCISCO EDIVAR RODRIGUES | comprovante: FRANCISCO EDIVAR RODRIGUES | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: FRANCISCO GERSON PAZ SILVA | comprovante: FRANCISCO GERSON PAZ SILVA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: FRANCISCO HUGO DA SILVA | comprovante: FRANCISCO HUGO DA SILVA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: FRANCISCO JOSE SOUSA CARNEIRO | comprovante: FRANCISCO JOSE SOUSA CARNEIR | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: FRANCISCO LAURO DA SILVA | comprovante: FRANCISCO LAURO DA SILVA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: FRANCISCO LEOMAR DA SILVA | comprovante: FRANCISCO LEOMAR DA SILVA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: GABRIEL RODRIGUES PINTO OLIVA | comprovante: GABRIEL RODRIGUES PINTO OLIV | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: GABRIELE LIMA VIEIRA | comprovante: Gabriele Lima VieirA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: GENIVALDO PEREIRA DE MIRANDA FILHO | comprovante: Genivaldo Pereira de Miranda | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: GEORGE FRANCISCO LEITE REIS | comprovante: GEORGE FRANCISCO LEITE REIS | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: GEORGE MARIO PEREIRA DE SOUZA | comprovante: GEORGE MARIO PEREIRA DE SOUZA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: GEORGIANO SOUSA CARDOSO | comprovante: GEORGIANO SOUSA CARDOSO | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: GERALDO CASSIO PEREIRA DOS SANTOS | comprovante: GERALDO CASSIO PEREIRA DOS S | score: 99.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: GILBERTO DOS SANTOS DIAS | comprovante: GILBERTO DOS SANTOS DIAS | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: GILSON ALVES GOMES | comprovante: GILSON ALVES GOMES | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: GIVANILDO BARBOSA DE SOUZA | comprovante: GIVANILDO BARBOSA DE SOUZA | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: GIVANILDO JOSE DOS SANTOS | comprovante: GIVANILDO JOSE DOS SANTOS | score: 100.00
+2026-05-29 10:33:55 | INFO | Melhor correspondencia | relacao: GUILHERME DE OLIVEIRA CARDOSO | comprovante: GUILHERME DE OLIVEIRA CARDOS | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: GUILHERME KAIC SATO CANISELLA | comprovante: GUILHERME KAIC SATO CANISELL | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: GUSTAVO BRITO DOS SANTOS | comprovante: GUSTAVO BRITO DOS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: GUSTAVO DANIEL FERREIRA | comprovante: GUSTAVO DANIEL FERREIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: HELDER DIAS DE OLIVEIRA | comprovante: HELDER DIAS DE OLIVEIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: HORACIO QUEIROZ DE OLIVEIRA | comprovante: HORACIO QUEIROZ DE OLIVEIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: HUBERT SILVA BARBOSA | comprovante: Hubert Silva Barbosa | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: IGOR BRUNO DE CARVALHO | comprovante: IGOR BRUNO DE CARVALHO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JACKSON AMORIM DINIZ | comprovante: JACKSON AMORIM DINIZ | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JADSON PEREIRA DE OLIVEIRA | comprovante: JADSON PEREIRA DE OLIVEIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JAILSON JOAQUIM ALVES DE SANTANA | comprovante: JAILSON JOAQUIM ALVES DE SAN | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JAILSON PEREIRA DA SILVA | comprovante: JAILSON PEREIRA DA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JAILTON SANTOS | comprovante: JAILTON SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JAIRO SANTOS SANTIAGO | comprovante: JAIRO SANTOS SANTIAGO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JANAILTO DE SOUSA NEPONUCENO | comprovante: JANAILTO DE SOUSA NEPONUCENO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JEISIAN TEIXEIRA DE OLIVEIRA | comprovante: JEISIAN TEIXEIRA DE OLIVEIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JESSICA PAMELA GRAVENA | comprovante: JESSICA PAMELA GRAVENA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOAO BATISTA DA ROCHA | comprovante: JOAO BATISTA DA ROCHA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOAO LUCAS CABRAL CORREA SOUSA | comprovante: JOAO LUCAS CABRAL CORRREA SO | score: 98.37
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOAO LUCAS PINHEIRO OLIVEIRA | comprovante: JOAO LUCAS PINHEIRO OLIVEIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Sem correspondencia segura | relacao: JOAO PAULO JOSE DE CARVALHO | melhor score: 55.17
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOAO PEDRO RODRIGUES DE HOLANDA | comprovante: JOAO PEDRO RODRIGUES DE HOLA | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOAO SANTOS DE SANTANA | comprovante: JOAO SANTOS DE SANTANA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOAO VICTOR AZEVEDO DURAES SANTOS | comprovante: JOAO VICTOR AZEVEDO D SANTOS | score: 97.97
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOAO VICTOR QUEIROZ DA SILVA | comprovante: JOAO VICTOR QUEIROZ DA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOAO VITOR PEREIRA | comprovante: JOAO VITOR PEREIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOCEVAL ROCHA AVELINO | comprovante: JOCEVAL ROCHA AVELINO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOEL RAMOS SOUSA | comprovante: JOEL RAMOS SOUSA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOSE ALVES DE SANTANA | comprovante: JOSE ALVES DE SANTANA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOSE CARLOS MATOS RAMOS | comprovante: JOSE CARLOS MATOS RAMOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOSE DE ASSIS RODRIGUES RAMOS | comprovante: JOSE DE ASSIS RODRIGUES RAMO | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOSE DIEGO FONSECA LIMA | comprovante: JOSE DIEGO FONSECA LIMA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOSE DOS SANTOS | comprovante: JOSE DOS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOSE EDSON DA SILVA | comprovante: JOSE EDSON DA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOSE RONALDO SOUSA DA SILVA | comprovante: JOSE RONALDO SOUSA DA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOSEAN BARTOLOMEU VIEIRA DE SOUSA S | comprovante: JOSEAN BARTOLOMEU VIEIRA DE | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOSUE PEREIRA PAULA | comprovante: JOSUE PEREIRA PAULA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JUMAR DOS SANTOS | comprovante: JUMAR DOS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: KELVIN DOS SANTOS VIEIRA | comprovante: KELVIN DOS SANTOS VIEIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LEANDRO COSTA FERREIRA | comprovante: LEANDRO COSTA FERREIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LEANDRO MARTINS DOS SANTOS | comprovante: LEANDRO MARTINS DOS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LEONARDO AUGUSTO DA SILVA | comprovante: LEONARDO AUGUSTO DA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LEONARDO CORREIA DE SA | comprovante: LEONARDO CORREIA DE SA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LUCAS DA SILVA SOUSA | comprovante: LUCAS DA SILVA SOUSA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LUCAS FREITAS FIALHO | comprovante: LUCAS FREITAS FIALHO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LUCENILSON MOTA FERREIRA | comprovante: LUCENILSON MOTA FERREIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LUIS FILIPI DE SOUSA | comprovante: LUIS FILIPE DE SOUSA | score: 98.85
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LUIZ CARLOS FERRAZ VIEIRA | comprovante: Luiz Carlos Ferraz Vieira | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LUIZ CLAUDIO DIAS VERSIANI | comprovante: LUIZ CLAUDIO DIAS VERSIANI | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LUIZ ELIAS BARBOSA | comprovante: LUIZ ELIAS BARBOSA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LUIZ HENRIQUE SOUZA PEREIRA | comprovante: LUIZ HENRIQUE SOUZA PEREIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MANOEL SOARES PRATES | comprovante: Manoel Soares Prates | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MARCIO BRITO GUIMARAES | comprovante: MARCIO BRITO | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MARCO ANTONIO MENDES SOBIS | comprovante: MARCO ANTONIO MENDES SOBIS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MARCONES COSTA MARTINS | comprovante: MARCONES COSTA MARTINS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MARCUS AURELIO DA CONCEICAO ROCHA | comprovante: MARCUS AURELIO DA CONCEICAO | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MARCUS VINICIUS DE SOUSA GONCALVES | comprovante: MARCUS VINICIUS DE SOUSA GON | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MARLENE VIEIRA DE SOUZA | comprovante: MARLENE VIEIRA DE SOUZA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MARLON CARMO DOS SANTOS | comprovante: MARLON CARMO DOS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MARLON DIOGO MARTINS E MARTINS | comprovante: Marlon Diogo Martins Martins | score: 97.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MAX SANTOS | comprovante: MAX SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MAYCON BRAZ NASCIMENTO | comprovante: MAYCON BRAZ NASCIMENTO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MICHAEL DOUGLAS SANTOS VIANA | comprovante: Michael Douglas Santos Viana | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MILTON CESAR DA SILVA SOBRAL | comprovante: MILTON CESAR DA SILVA SOBRAL | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MILTON REIS SANTOS | comprovante: MILTON REIS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MURILO ALVES DOS SANTOS | comprovante: MURILO ALVES DOS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: NADILSON FERREIRA DOS SANTOS | comprovante: NADILSON FERREIRA DOS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: NELSON JOSE DOS SANTOS | comprovante: NELSON JOSE DOS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: OLDANIAS VITOR DIAS FERNANDES | comprovante: Oldanias vitor dias fernande | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: PABLO HENRIQUE FERNANDES RAMOS | comprovante: PABLO HENRIQUE FERNANDES RAMOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: PAULA GARDENIA DE FREITAS E SILVA | comprovante: Paula Gardenia De Freitas E | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: PAULLA JURACIARA MARTINS PINHEIRO | comprovante: PAULLA JURACIARA MARTINS PIN | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: PAULO HENRIQUE CORDEIRO | comprovante: PAULO HENRIQUE CORDEIRO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: PAULO HENRIQUE DA CONCEICAO | comprovante: PAULO HENRIQUE DA CONCEICAO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: PEDRO DE SOUSA COELHO JUNIOR | comprovante: PEDRO DE SOUSA COELHO JUNIOR | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: PEDRO HENRIQUE BORTOLOTTI | comprovante: PEDRO HENRIQUE BORTOLOTTI | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: PEDRO HENRIQUE DE JESUS | comprovante: Pedro Henrique de jesus | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: PEDRO RAYLON DE SOUSA | comprovante: PEDRO RAYLON | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: PEDRO VICTOR SANTOS DE MIRANDA | comprovante: PEDRO VICTOR MIRANDA | score: 88.64
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: RAMON LIMA DA ENCARNACAO | comprovante: RAMON LIMA DA ENCARNACAO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: REGINALDO DA SILVA MATOS | comprovante: REGINALDO DA SILVA MATOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: RENALDO FERREIRA DA SILVA | comprovante: RENALDO FERREIRA DA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: RENEE FERNANDO DE SOUZA VINDOCA | comprovante: RENEE FERNANDO DE SOUZA VIND | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: RICARDO CAETANO DE SOUZA | comprovante: RICARDO CAETANO DE SOUZA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: RICHER IGOR CARVALHO PIO | comprovante: RICHER IGOR CARVALHO PIO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ROBERTO GABRIEL PEREIRA CARDOSO | comprovante: Roberto Gabriel Pereira Card | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ROBERTO LOIOLA RIBEIRO | comprovante: ROBERTO LOIOLA RIBEIRO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: RUAN GONCALVES SANTOS | comprovante: RUAN GONCALVES SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: SODRE CARLOS DE SANT ANA | comprovante: SODRE CARLOS DE SANTANA | score: 97.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: TIAGO COSTA DOS SANTOS | comprovante: TIAGO COSTA DOS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: TIAGO JAKSON DE RAMOS | comprovante: TIAGO JAKSON DE RAMOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: UELTON DE LIMA SILVA | comprovante: UELTON DE LIMA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: UENDEL DO ESPIRITO SANTO TRINDADE | comprovante: UENDEI DO ESPIRITO SANTO TRI | score: 96.83
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: VALDINEI SANTOS DOS SANTOS | comprovante: VALDINEI SANTOS DOS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: VALDIR CARVALHO PEREIRA | comprovante: VALDIR CARVALHO PEREIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: VALDIR FERREIRA SILVA | comprovante: VALDIR FERREIRA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: VALDIR MATOS VASCONCELOS | comprovante: VALDIR MATOS VASCONCELOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: VALTER LIRA DE OLIVEIRA | comprovante: VALTER LIRA DE OLIVEIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: VANDIRCE NASCIMENTO DOS SANTOS | comprovante: VANDIRCE NASCIMENTO DOS SANT | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: VERINALDO FRANCISCO DE FREITAS | comprovante: VERINALDO FRANCISCO DE FREIT | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: VINICIUS ARAUJO SOARES | comprovante: VINICIUS ARAUJO SOARES | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: VITORIO FRANCISCO PEREIRA DE BARROS | comprovante: VITORIO FRANCISCO PEREIRA DE | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: WAGNER MATEUS GONCALVES SILVA | comprovante: WAGNER MATEUS GONCALVES SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: WALTER RODRIGUES PEREIRA | comprovante: WALTER RODRIGUES PEREIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: WESLEY DE JESUS DE QUEIROZ | comprovante: WESLEY DE JESUS DE QUEIROZ | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ADRIANO PAULO SILVA | comprovante: ADRIANO PAULO SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: AGUINALDO RODRIGUES DE SOUZA | comprovante: AGUINALDO RODRIGUES DE SOUZA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ALEX VILA NOVA DE SOUZA | comprovante: ALEX VILA NOVA DE SOUZA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ALEXANDRE NASCIMENTO PEREIRA | comprovante: ALEXANDRE NASCIMENTO PEREIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ANDERSON PEREIRA RAMOS | comprovante: ANDERSON PEREIRA RAMOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ANIVANIO FERREIRA SILVA | comprovante: ANIVANIO FERREIRA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ANTONIO VALMILDE FERREIRA COELHO | comprovante: ANTONIO VALMILDE F COELHO | score: 96.77
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ARNALDO JOSE DA SILVA | comprovante: ARNALDO JOSE DA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: BENEDITO LACERDA DOS SANTOS | comprovante: BENEDITO LACERDA DOS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: CARLOS RAFAEL LIMA SILVA | comprovante: CARLOS RAFAEL LIMA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: CASSIANO JOSE DA SILVA NETO | comprovante: CASSIANO JOSE DA SILVA NETO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: CASSIO BARBOSA SOUZA | comprovante: CASSIO BARBOSA SOUZA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: CHARLES AUGUSTO DA SILVA | comprovante: CHARLES AUGUSTO DA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: DAVI LUAN ALVES LEAL | comprovante: Davi Luan Alves Leal | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: DENILSON ROSA DE AMORIM | comprovante: DENILSON ROSA DE AMORIM | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: DIEGO COUTINHO CAMPOS DE SENA | comprovante: DIEGO COUTINHO CAMPOS DE SEN | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: DIEMISSON HIGOR DIAS SILVA | comprovante: DIEMISSON HIGOR DIAS SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: DIONE SANTOS SILVA | comprovante: DIONE SANTOS SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: EDIMARCOS EDNALDO DE SOUSA | comprovante: EDIMARCOS EDNALDO | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: EDUARDO SILVA DE ALBUQUERQUE | comprovante: EDUARDO SILVA DE ALBUQUERQUE | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ELI APARECIDO COSTA | comprovante: ELI APARECIDO COSTA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ELIELSON FERREIRA LIMA | comprovante: ELIELSON FERREIRA LIMA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ELIVAN BARBOSA | comprovante: ELIVAN BARBOSA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: EMANUEL DE JESUS CARVALHO | comprovante: EMANUEL DE JESUS CARVALHO DO | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: EZEQUIAS SOARES FAGUNDES | comprovante: EZEQUIAS SOARES FAGUNDES | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: FERNANDO MATOS BRITO | comprovante: FERNANDO MATOS BRITO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: FLAVIO MATEUS DE MELO SANTANA | comprovante: Flavio Mateus De Melo Santan | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: GEILSON JOSE DOS SANTOS | comprovante: GEILSON JOSE DOS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: GENESSON DA SILVA | comprovante: GENESSON DA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: GILBERTO FERNANDES SOARES | comprovante: GILBERTO FERNANDES SOARES | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: GILVAN NUNES DE OLIVEIRA | comprovante: GILVAN NUNES DE OLIVEIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: GUTEMBERG KERRIGAN ALVES | comprovante: GUTEMBERG KERRIGAN ALVES ALB | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: IAGO AQUINO FERREIRA | comprovante: IAGO AQUINO FERREIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ISRAEL AFONSO SOARES JUNIOR | comprovante: ISRAEL AFONSO SOARES JUNIOR | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ITALO DAVI DO SACRAMENTO SANTANA | comprovante: ITALO DAVI DO SACRAMENTO SAN | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: IVAN JORGE FERREIRA | comprovante: IVAN JORGE FERREIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JEFFERSON SILVA SANTANA | comprovante: JEFFERSON SILVA SANTANA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JHONATAN JUNEO RODRIGUES SANTOS | comprovante: JHONATAN JUNEO RODRIGUES SAN | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOAO JAQUES RAMOS MADUREIRA JUNIOR | comprovante: JOAO JAQUES RAMOS MADUREIRA | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOAQUIM DE SOUSA SOBRINHO | comprovante: JOAQUIM DE SOUSA SOBRINHO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOCENIR NASCIMENTO BRITO | comprovante: JOCENIR NASCIMENTO BRITO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOCIELIO DE LIMA FREIRE | comprovante: JOCIELIO DE LIMA FREIRE | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOSE ANTONIO VILA NOVA DE SOUZA | comprovante: JOSE ANTONIO VILA NOVA DE SO | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOSE LEONARDO CERQUEIRA LIMA | comprovante: JOSE LEONARDO CERQUEIRA LIMA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOSE RICARDO DIONIZIO ROCHA | comprovante: JOSE RICARDO DEONIZIO ROCHA | score: 99.37
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: JOSUE ALVES DA SILVA | comprovante: JOSUE ALVES DA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: KAIQUE ALEXANDRE SANTOS DE PAULA | comprovante: KAIQUE ALEXANDRE SANTOS DE P | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: KLEYTON RHANER FONSECA VIANNA | comprovante: KLEYTON RHANER FONSECA VIANN | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LEANDRO PEREIRA BRITO | comprovante: LEANDRO PEREIRA BRITO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LEONIDAS LIMA DA SILVA | comprovante: LEONIDAS LIMA DA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LUCAS CARDOSO DA TRINDADE | comprovante: LUCAS CARDOSO DA TRINDADE | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LUCAS LOPES NOLETO CABRAL | comprovante: LUCAS LOPES NOLETO CABRAL | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LUCAS SOARES ROCHA | comprovante: LUCAS SOARES ROCHA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: LUIS OTAVIO OLIVEIRA PEREIRA | comprovante: LUIS OTAVIO OLIVEIRA PEREIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MANOEL MESSIAS LIMA DA CRUZ | comprovante: MANOEL MESSIAS LIMA DA CRUZ | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MANOEL MESSIAS SANTOS DA SILVA | comprovante: MANOEL MESSIAS SANTOS DA SIL | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MARCELO DIAS ARGENTINO | comprovante: MARCELO DIAS ARGENTINO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MARCOS PAULO LOPES SILVA | comprovante: MARCOS PAULO LOPES SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MARCOS TIOFILO DOS SANTOS JUNIOR | comprovante: MARCOS TEOFILO DOS SANTOS JU | score: 97.23
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MARIOLINO RODRIGUES DE SOUSA JUNIOR | comprovante: MARIOLINO RODRIGUES DE SOUSA | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MATEUS DE SOUZA BARBOSA | comprovante: MATEUS DE SOUSA BARBOSA | score: 99.09
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MATEUS FELIPE MENDES SILVA | comprovante: Mateus Felipe Mendes Ferreir | score: 76.10
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: MATHEUS CAETANO NASCIMENTO | comprovante: MATHEUS CAETANO NASCIMENTO | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: NAIANY RODRIGUES SILVA | comprovante: NAIANY RODRIGUES SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: NATHAN LUCAS NOBRE FERREIRA | comprovante: NATHAN LUCAS NOBRE FERREIRA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: NILSON PEREIRA LIMA | comprovante: NILSON PEREIRA LIMA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: OSITA RODRIGUES DA SILVA | comprovante: OSITA RODRIGUES DA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: PATRICK LUANN OLIVEIRA SOUZA | comprovante: PATRICK LUANN OLIVEIRA SOUZA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: PATRIK LUAN ANTUNES DOS SANTOS | comprovante: PATRIK LUAN ANTUNES DOS SANT | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: PEDRO HENRIQUE SILVA SANTOS | comprovante: PEDRO HENRIQUE SILVA SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: RAFAEL SOARES DA SILVA | comprovante: RAFAEL SOARES DA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: RAIMUNDO NONATO DA COSTA JUNIOR | comprovante: RAIMUNDO NONATO DA COSTA JUN | score: 99.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: REGINALDO DE JESUS MARTINS | comprovante: Reginaldo de jesus Martins | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: REGINALDO PEREIRA DOS SANTOS | comprovante: REGINALDO PEREIRA DOS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: RENAN OLEGARIO DA SILVA | comprovante: RENAN OUEGRIO DA SILVA | score: 98.34
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: RODRIGO MARINHO ARAUJO SALES | comprovante: RODRIGO MARINHO ARAUJO SALES | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ROMILSON BARBOSA RAMOS | comprovante: ROMILSOM BARBOSA RAMOS | score: 99.13
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: ROSIVAL FRANCISCO DOS SANTOS | comprovante: ROSIVAL FRANCISCO DOS SANTOS | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: SAVIO CARDOSO DA SILVA | comprovante: SAVIO CARDOSO DA SILVA | score: 100.00
+2026-05-29 10:33:56 | INFO | Melhor correspondencia | relacao: SAVIO DA GUARDA SANTANA | comprovante: SAVIO DA GUARDA SANTANA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: SIDELMO AMERICO DE AMORIM FERREIRA | comprovante: SIDELMO AMERICO DE AMORIM FE | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: SIDINEI DA ANUNCIACAO DA SILVA | comprovante: SIDINEI ANUNCIACAO DA SILVA | score: 97.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: SINDOMAR SANTOS E SANTOS | comprovante: SINDOMAR SANTOS E SANTOS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: TIAGO RODRIGUES SALES | comprovante: TIAGO RODRIGUES SALES | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: VALDEMIR CORDEIRO DA CONCEICAO | comprovante: VALDEMIR CORDEIRO | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: VALMIR MENDES DOS SANTOS | comprovante: VALMIR MENDES DOS SANTOS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: WALISSON DE FARIAS RODRIGUES | comprovante: WALISSON DE FARIAS RODRIGUES | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: WANDERSON SOUSA DOS SANTOS | comprovante: WANDERSON SOUSA DOS SANTOS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: WELLINGTON ANTONIO RODRIGUES | comprovante: WELLINGTON ANTONIO RODRIGUES | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: WELLINGTON ANTONIO RODRIGUES Pereira | comprovante: WELLINGTON ANTONIO RODRIGUES | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: WELLINGTON DE JESUS | comprovante: WELLINGTON DE JESUS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: WESLEY ALVES DA SILVA | comprovante: WESLEY ALVES DA SILVA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: WILKER BEZERRA SOUSA | comprovante: WILKER BEZERRA SOUSA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: YURY CRISSON SILVA SOARES | comprovante: YURY CRISSON SILVA SOARES | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: ZIRINELSON DOS SANTOS GALVAO | comprovante: ZIRINELSON DOS SANTOS GALVAO | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: EVANILDO DE JESUS SOUZA | comprovante: EVANILDO DE JESUS SOUZA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: ADAILTON DOMINGOS SANTOS DA SILVA | comprovante: ADAILTON DOMINGOS SANTOS DA | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: ALEJANDRO SERRA DA ROCHA | comprovante: ALEJANDRO SERRA DA ROCHA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: ALEXANDRE JOSE DOS SANTOS | comprovante: ALEXANDRE JOSE DOS SANTOS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: BRUNO HENRIQUE CHAGAS DA SILVA | comprovante: BRUNO HENRIQUE CHAGAS DA SIL | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: BRUNO MACEDO ALVES | comprovante: BRUNO MACEDO ALVES | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: CARLOS ALBERTO DIAS MARTINS | comprovante: CARLOS ALBERTO DIAS MARTINS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: CARLOS EWERSON CARDOSO PINHEIRO | comprovante: CARLOS EWERSON CARDOSO PINHE | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: CLAUDIO ADAO SOUSA | comprovante: CLAUDIO ADAO SOUSA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: CLEBER SAMUEL AVELINO DA SILVA | comprovante: CLEBER SAMUEL AVELINO | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: DANIEL ABREU DA SILVA | comprovante: DANIEL ABREU DA SILVA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: DEIVID FREITAS DOS SANTOS | comprovante: DEIVID FREITAS DOS | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: DEIVIDIS FELICIO FERNANDES | comprovante: DEIVIDIS FELICIO FERNANDES | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: DENNIS BARBOSA LIMA | comprovante: DENNIS BARBOSA LIMA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: DJALMA SOUZA VICENTE | comprovante: DJALMA SOUZA VICENTE | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: ELINALDO RODRIGUES DOS SANTOS | comprovante: ELINALDO RODRIGUES DOS SANTO | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: FABIANO GOMES DA SILVA | comprovante: FABIANO GOMES DA SILVA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: FABIO DIAS FERREIRA | comprovante: FABIO DIAS FERREIRA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: FABIO GABRIEL GOMES SANTANA BRAZ | comprovante: FABIO GABRIEL GOMES SANTANA | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: FELIPE SANTOS OSCAR | comprovante: FELIPE SANTOS | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: FILIPE DE SOUSA SILVA | comprovante: FILIPE DE SOUSA SILVA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: FRANCISCO GABRIEL SOARES | comprovante: Francisco Gabriel Soares | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: FRANCISCO GERALDO DA SILVA NETO | comprovante: FRANCISCO GERALDO DA SILVA N | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: GERSON FALCAO SANTOS | comprovante: GERSON FALCAO SANTOS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: GUILHERME EMANUEL ABREU | comprovante: GUILHERME EMANUEL ABREU | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: GUSTAVO HENRIQUE ALVES DE SOUSA | comprovante: GUSTAVO HENRIQUE ALVES DE SO | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: HERMES GIESE EMANUEL E SILVA | comprovante: HERMES GIESE EMANUEL E SILVA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: ISMAEL CARLOS ARAUJO DE CARVALHO | comprovante: ISMAEL CARLOS ARAUJO CARVALHO | score: 97.00
+2026-05-29 10:33:57 | INFO | Sem correspondencia segura | relacao: JACKSON FRANCISCO MACIEL DE SOUSA | melhor score: 46.99
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JEANDSON CARLOS DOS SANTOS | comprovante: JEANDSON CARLOS DOS SANTOS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JEFERSON TIAGO DE SOUZA CARDOSO | comprovante: JEFERSON TIAGO DE SOUZA CARD | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JENILSON SILVA DE JESUS | comprovante: JENILSON SILVA DE JESUS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JEOVANNE DAVINO MENESES SILVA | comprovante: JEOVANNE DAVINO MENESES SILV | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JIOVANA SANTOS NUNES | comprovante: Jiovana Santos Nunes | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JOANAS BATISTA DE JESUS | comprovante: JOANAS BATISTA DE JESUS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JOAO DE DEUS DA COSTA SILVA | comprovante: JOAO DE DEUS DA COSTA SILVA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JOAO NATANAEL SANTOS | comprovante: JOAO NATANAEL SANTOS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JORDELFRANK SILVA PORTO | comprovante: JORDEL FRANK SILVA PORTO | score: 97.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JOSE AUGUSTO SANTANA FILHO | comprovante: Jose Augusto Santana Filho | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JOSE CLEBSON ALVES SANTOS | comprovante: JOSE CLEBSON ALVES SANTOS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JOSE JESUS ALVES DE SOUSA | comprovante: JOSE JESUS ALVES DE SOUSA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JOSE LUIS BARBOSA | comprovante: JOSE LUIS DA SILVA | score: 68.53
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JOSE RIQUEMARQUES SOUZA SANTOS | comprovante: JOSE RIQUEMARQUES SOUZA SANT | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JOSE RONALDO DE CARVALHO | comprovante: JOSE RONALDO DE CARVALHO | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JOSEMAR SANTOS DA CONCEICAO | comprovante: JOSEMAR SANTOS DA CONCEICAO | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JOSENILTON LIMA DO CARMO | comprovante: Josenilton lima do carmo | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JUNEO PEREIRA DE OLIVEIRA | comprovante: JUNEO PEREIRA DE OLIVEIRA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: JUSCELINO BARBOSA | comprovante: JUSCELINO BARBOSA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: KAIQUE RODRIGUES DA SILVA | comprovante: KAIQUE RODRIGUES DA SILVA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: LEANDRO FERREIRA DE JESUS | comprovante: LEANDRO FERREIRA DE JESUS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: LOURENCO ARAUJO DO NASCIMENTO | comprovante: LOURENCO ARAUJO DO NASCIMENT | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: LUCAS PEREIRA DOS SANTOS | comprovante: LUCAS PEREIRA DOS SANTOS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: LUIS FILIPE ROCHA | comprovante: Luis Felipe Rocha | score: 98.70
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: MANOEL ALVES DA SILVA FILHO | comprovante: MANOEL ALVES DA SILVA FILHO | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: MARCIO MATOS FRANCA | comprovante: MARCIO MATOS FRANCA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: MARCOS DIONES ARRUDA DA SILVA | comprovante: MARCOS DIONES ARRUDA DA SILV | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: MAURICIO SANTOS DE OLIVEIRA | comprovante: MAURICIO SANTOS DE OLIVEIRA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: MICHAEL CARDOSO COELHO | comprovante: MICHAEL CARDOSO COELHO | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: NAZARENO MORAES CARDOSO | comprovante: NAZARENO MORAES CARDOSO | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: NEIVALDO SOUZA SILVA | comprovante: NEIVALDO SOUZA SILVA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: OSMAR PEREIRA JUNIOR | comprovante: OSMAR PEREIRA JUNIOR | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: PABLO DIEGO LEITE MOTA | comprovante: PABLO DIEGO LEITE MOTA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: PATRICIO MARCOS SANTOS | comprovante: PATRICIO MARCOS SANTOS | score: 100.00
+2026-05-29 10:33:57 | INFO | Sem correspondencia segura | relacao: PAULO CASSIMIRO DE ARAUJO | melhor score: 41.56
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: PAULO MODESTO SANTANA | comprovante: PAULO MODESTO SANTANA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: PAULO PEDRO DA SILVA | comprovante: PAULO PEDRO DA SILVA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: PEDRO MAYCON SILVA | comprovante: Pedro Maycon silva | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: PERICLES OLIVEIRA SANTOS | comprovante: PERICLES OLIVEIRA SANTOS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: PHELLIPE RENNE SOUZA RODRIGUES | comprovante: PHELLIPE RENNE SOUZA RODRIGU | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: RAIMUNDO CLEITON DA SILVA FIRMINO | comprovante: RAIMUNDO CLEYTON DA SILVA FI | score: 96.83
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: RAIMUNDO VALDIVINO DE OLIVEIRA | comprovante: RAIMUNDO VALDIVINO DE OLIVEI | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: RONALDO BARBOSA DE MOURA | comprovante: RONALDO BARBOSA DE MOURA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: RULIO RAFFAEL DOS SANTOS MACHADO | comprovante: RULIO RAFFAEL DOS SANTOS MAC | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: SAMUEL OLIVEIRA DA SILVA | comprovante: Samuel Oliveira Da Silva | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: SIRLEY DA COSTA SARGES | comprovante: SIRLEY DA COSTA SARGES | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: TAFFAREL PEREIRA SILVA | comprovante: TAFFAREL PEREIRA SILVA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: TALISSON VAZ PRADO | comprovante: TALISON VAZ | score: 82.13
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: TIAGO MULINARI CICILIOTI | comprovante: Tiago Mulinari Cicilioti | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: VAGNER SANTOS DE MELO | comprovante: VAGNER SANTOS DE MELO | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: VALDER DE SOUSA VIEIRA | comprovante: VALDER DE SOUSA VIEIRA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: VANDSON RAFAEL SILVEIRA RAMOS | comprovante: VANDSON RAFAEL SILVEIRA RAMO | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: VICENTE DE FREITAS EVANGELISTA | comprovante: VICENTE DE FREITAS EVANGELIS | score: 99.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: WESLEY JOSE DE SOUSA | comprovante: WESLEY JOSE DE SOUSA | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: WILKISON MANOEL SANTANA DA SILVA | comprovante: WILKSON MANUEL SANTANA DA SI | score: 97.30
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: WINICIUS ALVES DIAS | comprovante: WINICIUS ALVES DIAS | score: 100.00
+2026-05-29 10:33:57 | INFO | Melhor correspondencia | relacao: ZANDER DOS SANTOS FERNANDES | comprovante: ZANDER DOS SANTOS FERNANDES | score: 100.00
+2026-05-29 10:33:57 | INFO | Fim da execucao

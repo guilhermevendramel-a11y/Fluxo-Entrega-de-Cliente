@@ -1,0 +1,140 @@
+import os
+import re
+import unicodedata
+import difflib
+from PyPDF2 import PdfMerger
+
+def remover_acentos(texto):
+    """Remove acentos e caracteres especiais de uma string."""
+    # Transforma "Açúcar" em "Acucar", ignorando os acentos
+    texto = unicodedata.normalize('NFKD', texto).encode('ASCII', 'ignore').decode('ASCII')
+    return texto
+
+def limpar_nome_holerite(nome_arquivo):
+    """Limpa o nome do arquivo do holerite extraindo apenas o nome base."""
+    nome = nome_arquivo.lower().replace('.pdf', '')
+    nome = re.sub(r'^\d+\s*-\s*', '', nome) # Tira números iniciais
+    nome = re.sub(r'\s*-?\s*holerite$', '', nome) # Tira a palavra holerite
+    nome = remover_acentos(nome) # Tira os acentos
+    return re.sub(r'\s+', ' ', nome).strip().upper()
+
+def limpar_nome_comprovante(nome_arquivo):
+    """Limpa o nome do arquivo do comprovante."""
+    nome = nome_arquivo.lower().replace('.pdf', '')
+    nome = remover_acentos(nome) # Tira os acentos
+    return re.sub(r'\s+', ' ', nome).strip().upper()
+
+def unificar_documentos(pasta_principal):
+    if not os.path.exists(pasta_principal):
+        print(f"❌ Pasta não encontrada: {pasta_principal}")
+        return
+
+    pasta_holerites = None
+    pasta_comprovantes = None
+
+    for item in os.listdir(pasta_principal):
+        caminho_completo = os.path.join(pasta_principal, item)
+        if os.path.isdir(caminho_completo):
+            if 'holerite' in item.lower():
+                pasta_holerites = caminho_completo
+            elif 'comprovante' in item.lower():
+                pasta_comprovantes = caminho_completo
+
+    if not pasta_holerites or not pasta_comprovantes:
+        print("❌ Não encontrei as subpastas (uma de 'holerites' e outra de 'comprovantes').")
+        return
+
+    pasta_saida = os.path.join(pasta_principal, "DOCUMENTOS_UNIFICADOS")
+    os.makedirs(pasta_saida, exist_ok=True)
+
+    print(f"📂 Holerites: {os.path.basename(pasta_holerites)}")
+    print(f"📂 Comprovantes: {os.path.basename(pasta_comprovantes)}")
+    print("🔍 Analisando e cruzando nomes (tolerância a acentos e abreviações)...\n")
+
+    mapa_holerites = {}
+    mapa_comprovantes = {}
+
+    # Mapeia tudo limpando os acentos
+    for arquivo in os.listdir(pasta_holerites):
+        if arquivo.lower().endswith('.pdf'):
+            mapa_holerites[limpar_nome_holerite(arquivo)] = arquivo
+
+    for arquivo in os.listdir(pasta_comprovantes):
+        if arquivo.lower().endswith('.pdf'):
+            mapa_comprovantes[limpar_nome_comprovante(arquivo)] = arquivo
+
+    sucesso = []
+    sem_comprovante = []
+    nomes_comprovantes_disponiveis = list(mapa_comprovantes.keys())
+
+    for nome_holerite, arq_holerite in mapa_holerites.items():
+        caminho_holerite = os.path.join(pasta_holerites, arq_holerite)
+
+        # MÁGICA ACONTECE AQUI:
+        # Tenta achar o nome com no mínimo 85% de similaridade (cutoff=0.85)
+        correspondencias = difflib.get_close_matches(
+            nome_holerite, 
+            nomes_comprovantes_disponiveis, 
+            n=1, 
+            cutoff=0.85
+        )
+
+        if correspondencias:
+            nome_encontrado = correspondencias[0]
+            arq_comprovante = mapa_comprovantes[nome_encontrado]
+            caminho_comprovante = os.path.join(pasta_comprovantes, arq_comprovante)
+            
+            # Avisa na tela se precisou usar a aproximação
+            if nome_holerite != nome_encontrado:
+                print(f"🔄 Aproximação: '{nome_holerite}' combinou com '{nome_encontrado}'")
+            
+            try:
+                merger = PdfMerger()
+                merger.append(caminho_holerite)     
+                merger.append(caminho_comprovante)  
+                
+                # Salva o arquivo final usando o nome que veio do holerite
+                caminho_saida = os.path.join(pasta_saida, f"{nome_holerite}.pdf")
+                with open(caminho_saida, "wb") as output_file:
+                    merger.write(output_file)
+                merger.close()
+                
+                sucesso.append(nome_holerite)
+                # Remove o comprovante da lista de disponíveis para não ser usado duas vezes
+                nomes_comprovantes_disponiveis.remove(nome_encontrado) 
+                
+            except Exception as e:
+                print(f"⚠ Erro ao mesclar {nome_holerite}: {e}")
+        else:
+            sem_comprovante.append(arq_holerite)
+
+    # O que sobrou na lista de disponíveis são os comprovantes sem holerite
+    sem_holerite = [mapa_comprovantes[nome] for nome in nomes_comprovantes_disponiveis]
+
+    # --- RELATÓRIO ---
+    print("\n" + "="*50)
+    print("RESUMO DA UNIFICAÇÃO")
+    print("="*50)
+    print(f"✅ Pares unificados com sucesso: {len(sucesso)}")
+    
+    if sem_comprovante:
+        print(f"\n❌ Holerites sem comprovante ({len(sem_comprovante)}):")
+        for f in sem_comprovante:
+            print(f"   - {f}")
+            
+    if sem_holerite:
+        print(f"\n❌ Comprovantes sem holerite ({len(sem_holerite)}):")
+        for f in sem_holerite:
+            print(f"   - {f}")
+            
+    if not sem_comprovante and not sem_holerite:
+        print("\n✨ Sucesso total! Todos os documentos formaram pares exatos.")
+        
+    print(f"\n📁 Arquivos finais salvos em:\n{pasta_saida}")
+    print("="*50)
+
+
+# --- AJUSTE O CAMINHO ABAIXO ---
+caminho_pasta_principal = r"C:\Users\Notebook\Desktop\pasta"
+
+unificar_documentos(caminho_pasta_principal)

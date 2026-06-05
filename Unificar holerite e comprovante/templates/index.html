@@ -1,0 +1,294 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unificar holerite e comprovante</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="tabs">
+      <a class="tab {{ 'is-active' if active_tab == 'unificar' else '' }}" href="/?tab=unificar">Unificar holerite e comprovante</a>
+      <a class="tab {{ 'is-active' if active_tab == 'extrair' else '' }}" href="/?tab=extrair">Extrair por nomes</a>
+      <a class="tab {{ 'is-active' if active_tab == 'folha' else '' }}" href="/?tab=folha">Separar folha de pagamento</a>
+    </section>
+
+    {% if active_tab == 'unificar' %}
+      <section class="panel">
+        <div class="header">
+          <div>
+            <p class="eyebrow">PDFs de colaboradores</p>
+            <h1>Unificar holerite e comprovante</h1>
+          </div>
+          {% if resultado and resultado.tem_zip %}
+            <a class="download" href="{{ url_for('download', job_id=job_id, tipo='unificados') }}">Baixar ZIP</a>
+          {% endif %}
+        </div>
+
+        <form class="upload-box" action="{{ url_for('unificar') }}" method="post" enctype="multipart/form-data">
+          <div class="document-groups">
+            <section class="document-group">
+              <h2>Holerite</h2>
+              <div class="upload-grid">
+                <label class="drop-area">
+                  <span class="drop-title">Upload de pasta</span>
+                  <span class="drop-copy">Selecione a pasta com os holerites.</span>
+                  <span class="file-status">Nenhum arquivo selecionado</span>
+                  <input type="file" name="holerites_pasta" accept="application/pdf,.pdf" webkitdirectory directory multiple>
+                </label>
+
+                <label class="drop-area">
+                  <span class="drop-title">Upload de PDF</span>
+                  <span class="drop-copy">Arraste aqui ou selecione um ou mais PDFs de holerite.</span>
+                  <span class="file-status">Nenhum arquivo selecionado</span>
+                  <input type="file" name="holerites_pdf" accept="application/pdf,.pdf" multiple>
+                </label>
+              </div>
+            </section>
+
+            <section class="document-group">
+              <h2>Comprovante</h2>
+              <div class="upload-grid">
+                <label class="drop-area">
+                  <span class="drop-title">Upload de pasta</span>
+                  <span class="drop-copy">Selecione a pasta com os comprovantes.</span>
+                  <span class="file-status">Nenhum arquivo selecionado</span>
+                  <input type="file" name="comprovantes_pasta" accept="application/pdf,.pdf" webkitdirectory directory multiple>
+                </label>
+
+                <label class="drop-area">
+                  <span class="drop-title">Upload de PDF</span>
+                  <span class="drop-copy">Arraste aqui ou selecione um ou mais PDFs de comprovante.</span>
+                  <span class="file-status">Nenhum arquivo selecionado</span>
+                  <input type="file" name="comprovantes_pdf" accept="application/pdf,.pdf" multiple>
+                </label>
+              </div>
+            </section>
+          </div>
+
+          <div class="form-row">
+            <label for="similaridade">Similaridade minima</label>
+            <input id="similaridade" name="similaridade" type="number" min="0.50" max="1" step="0.01" value="{{ similaridade or 0.85 }}">
+            <button type="submit">Unificar PDFs</button>
+          </div>
+        </form>
+
+        {% if erro %}
+          <p class="alert">{{ erro }}</p>
+        {% endif %}
+      </section>
+
+      {% if resultado %}
+        <section class="summary">
+          <div class="metric">
+            <span>{{ resultado.pares|length }}</span>
+            <p>pares unificados</p>
+          </div>
+          <div class="metric">
+            <span>{{ resultado.total_holerites }}</span>
+            <p>holerites lidos</p>
+          </div>
+          <div class="metric">
+            <span>{{ resultado.total_comprovantes }}</span>
+            <p>comprovantes lidos</p>
+          </div>
+          <div class="metric warning">
+            <span>{{ resultado.sem_comprovante|length + resultado.sem_holerite|length }}</span>
+            <p>pendencias</p>
+          </div>
+        </section>
+
+        {% if resultado.pares %}
+          <section class="table-wrap">
+            <h2>Pares encontrados</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Colaborador</th>
+                  <th>Holerite</th>
+                  <th>Comprovante</th>
+                  <th>Match</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for par in resultado.pares %}
+                  <tr>
+                    <td>
+                      {{ par.nome }}
+                      {% if par.aproximado %}<span class="badge">aproximado</span>{% endif %}
+                    </td>
+                    <td>{{ par.holerite }}</td>
+                    <td>{{ par.comprovante }}</td>
+                    <td>{{ par.similaridade }}%</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </section>
+        {% endif %}
+
+        <section class="issues">
+          {% if resultado.sem_comprovante %}
+            <article>
+              <h2>Holerites sem comprovante</h2>
+              <ul>
+                {% for item in resultado.sem_comprovante %}<li>{{ item }}</li>{% endfor %}
+              </ul>
+            </article>
+          {% endif %}
+
+          {% if resultado.sem_holerite %}
+            <article>
+              <h2>Comprovantes sem holerite</h2>
+              <ul>
+                {% for item in resultado.sem_holerite %}<li>{{ item }}</li>{% endfor %}
+              </ul>
+            </article>
+          {% endif %}
+
+          {% if resultado.ignorados %}
+            <article>
+              <h2>Arquivos ignorados</h2>
+              <ul>
+                {% for item in resultado.ignorados %}<li>{{ item }}</li>{% endfor %}
+              </ul>
+            </article>
+          {% endif %}
+
+          {% if resultado.erros %}
+            <article>
+              <h2>Erros de leitura</h2>
+              <ul>
+                {% for item in resultado.erros %}<li>{{ item }}</li>{% endfor %}
+              </ul>
+            </article>
+          {% endif %}
+        </section>
+      {% endif %}
+    {% endif %}
+
+    {% if active_tab == 'extrair' %}
+      <section class="panel">
+        <div class="header"><h1>Extrair paginas por nomes</h1></div>
+        <form class="upload-box" action="{{ url_for('extrair_nomes') }}" method="post" enctype="multipart/form-data">
+          <label class="field-label">PDFs de comprovantes
+            <input type="file" name="comprovantes_pdf" accept="application/pdf,.pdf" multiple required>
+          </label>
+          <label class="field-label">Lista de nomes (1 por linha)
+            <textarea name="nomes" rows="10" placeholder="MARIA SILVA&#10;JOAO SOUZA">{{ nomes_input or '' }}</textarea>
+          </label>
+          <button type="submit">Extrair paginas</button>
+        </form>
+
+        {% if erro_extrair %}<p class="alert">{{ erro_extrair }}</p>{% endif %}
+
+        {% if resultado_extrair %}
+          <section class="table-wrap no-min-width">
+            <p><strong>Total de nomes:</strong> {{ resultado_extrair.total_nomes }}</p>
+            <p><strong>Encontrados:</strong> {{ resultado_extrair.encontrados|length }} | <strong>Faltantes:</strong> {{ resultado_extrair.faltantes|length }}</p>
+            {% if tem_zip_extrair %}
+              <a class="download" href="{{ url_for('download', job_id=job_id_extrair, tipo='extraidos') }}">Baixar ZIP</a>
+            {% endif %}
+
+            {% if resultado_extrair.faltantes %}
+              <h2>Nomes nao encontrados</h2>
+              <ul>{% for nome in resultado_extrair.faltantes %}<li>{{ nome }}</li>{% endfor %}</ul>
+            {% endif %}
+
+            {% if resultado_extrair.erros %}
+              <h2>Erros</h2>
+              <ul>{% for item in resultado_extrair.erros %}<li>{{ item }}</li>{% endfor %}</ul>
+            {% endif %}
+          </section>
+        {% endif %}
+      </section>
+    {% endif %}
+
+    {% if active_tab == 'folha' %}
+      <section class="panel">
+        <div class="header">
+          <div>
+            <h1>Separar Folha de Pagamento</h1>
+            <p class="subtitle">Envie o PDF da folha e escolha a forma de extracao.</p>
+          </div>
+        </div>
+
+        <form class="upload-box" action="{{ url_for('separar_folha') }}" method="post" enctype="multipart/form-data">
+          <label class="field-label">Arquivo PDF
+            <input type="file" name="folha_pdf" accept="application/pdf,.pdf" required>
+          </label>
+
+          <label class="field-label">Opcao de extracao
+            <select name="mode">
+              <option value="nomes-cbo" {{ 'selected' if (mode_folha or 'nomes-cbo') == 'nomes-cbo' else '' }}>1. Extrair nomes e CBO</option>
+              <option value="separar-demitidos" {{ 'selected' if mode_folha == 'separar-demitidos' else '' }}>2. Separar colaboradores e deixar demitidos por ultimo</option>
+            </select>
+          </label>
+
+          <button type="submit">Extrair</button>
+        </form>
+
+        {% if origem_extracao %}
+          <p class="hint">Metodo de leitura usado: <strong>{{ origem_extracao }}</strong></p>
+        {% endif %}
+
+        {% if erro_folha %}<p class="alert">{{ erro_folha }}</p>{% endif %}
+
+        {% if resultado_folha %}
+          <section class="table-wrap no-min-width">
+            <p><strong>Total localizado:</strong> {{ resultado_folha.total }}</p>
+
+            {% if resultado_folha.mode == 'separar-demitidos' %}
+              <p><strong>Ativos:</strong> {{ resultado_folha.ativos }} | <strong>Demitidos:</strong> {{ resultado_folha.demitidos }}</p>
+
+              <h2>Colaboradores Ativos</h2>
+              <textarea readonly class="plain-text">{% for item in resultado_folha.listaAtivos %}{{ item.nome }}
+{% endfor %}</textarea>
+
+              <h2>Demitidos (informados por ultimo)</h2>
+              <textarea readonly class="plain-text">{% for item in resultado_folha.listaDemitidos %}{{ item.nome }}
+{% endfor %}</textarea>
+            {% else %}
+              <h2>Nomes e CBO</h2>
+              <textarea readonly class="plain-text">{% for item in resultado_folha.colaboradores %}{{ item.nome }}	{{ item.funcao or '' }}	{{ item.cbo or '' }}
+{% endfor %}</textarea>
+
+              <table>
+                <thead>
+                  <tr><th>Nome</th><th>Funcao</th><th>CBO</th></tr>
+                </thead>
+                <tbody>
+                  {% for item in resultado_folha.colaboradores %}
+                    <tr><td>{{ item.nome }}</td><td>{{ item.funcao or '-' }}</td><td>{{ item.cbo or '-' }}</td></tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            {% endif %}
+          </section>
+        {% endif %}
+      </section>
+    {% endif %}
+  </main>
+
+  <script>
+    const formatFileStatus = (files) => {
+      const pdfs = Array.from(files).filter((file) => file.name.toLowerCase().endsWith('.pdf'));
+      if (pdfs.length === 0) return 'Nenhum PDF selecionado';
+      if (pdfs.length === 1) return pdfs[0].name;
+      return `${pdfs.length} PDFs selecionados`;
+    };
+
+    document.querySelectorAll('.drop-area').forEach((area) => {
+      const input = area.querySelector('input[type="file"]');
+      const status = area.querySelector('.file-status');
+      if (!input || !status) return;
+
+      input.addEventListener('change', () => {
+        status.textContent = formatFileStatus(input.files);
+        area.classList.toggle('has-files', input.files.length > 0);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "separar-folha-de-pagamento",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix web run dev",
+    "build": "npm --prefix web run build",
+    "start": "npm --prefix web run start",
+    "lint": "npm --prefix web run lint",
+    "open": "powershell -NoProfile -Command \"Start-Process 'http://localhost:3000'\""
+  }
+}
