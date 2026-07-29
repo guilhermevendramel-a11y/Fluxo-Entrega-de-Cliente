@@ -223,6 +223,11 @@ input[type="file"] {
   flex-wrap: wrap;
 }
 
+.mode-panel {
+  display: grid;
+  gap: 12px;
+}
+
 .form-row label,
 .field-label {
   display: grid;

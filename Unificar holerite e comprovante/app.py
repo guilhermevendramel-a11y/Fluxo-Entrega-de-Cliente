@@ -1,5 +1,6 @@
 ﻿import difflib
 import io
+import math
 import re
 import shutil
 import unicodedata
@@ -396,6 +397,117 @@ def extrair_paginas_por_nomes(arquivos_pdf: list[Path], nomes: list[str], pasta_
     }
 
 
+def ler_nomes_lista(texto: str) -> list[str]:
+    return [linha.strip() for linha in (texto or "").splitlines() if linha.strip()]
+
+
+def score_nome_em_texto(nome: str, texto: str) -> float:
+    nome_tokens = tokens_nome(nome)
+    texto_tokens = tokens_nome(texto)
+    if not nome_tokens or not texto_tokens:
+        return 0.0
+
+    nome_norm = " ".join(nome_tokens)
+    texto_norm = " ".join(texto_tokens)
+    if nome_norm in texto_norm:
+        return 100.0
+
+    pos = 0
+    encontrados = 0
+    for token in nome_tokens:
+        while pos < len(texto_tokens):
+            if token_parece_igual(texto_tokens[pos], token):
+                encontrados += 1
+                pos += 1
+                break
+            pos += 1
+
+    if encontrados < max(1, math.ceil(len(nome_tokens) * 0.75)):
+        return 0.0
+
+    cobertura = encontrados / len(nome_tokens)
+    return round(70.0 + (30.0 * cobertura), 2)
+
+
+def extrair_paginas_por_nomes_texto(arquivos_pdf: list[Path], nomes: list[str], pasta_saida: Path) -> dict:
+    pasta_saida.mkdir(parents=True, exist_ok=True)
+    nomes_originais = [n.strip() for n in nomes if n.strip()]
+    encontrados = set()
+    extraidos = []
+    erros = []
+    paginas = []
+
+    for pdf_path in arquivos_pdf:
+        try:
+            with pdf_path.open("rb") as file:
+                reader = PdfReader(file)
+                for idx, page in enumerate(reader.pages, start=1):
+                    texto = page.extract_text() or ""
+                    paginas.append((pdf_path, idx, texto))
+        except Exception as exc:
+            erros.append(f"{pdf_path.name}: {exc}")
+
+    candidatos = []
+    for i, nome in enumerate(nomes_originais):
+        for pdf_path, idx, texto in paginas:
+            score = score_nome_em_texto(nome, texto)
+            if score > 0:
+                candidatos.append((score, i, pdf_path, idx, texto))
+
+    candidatos.sort(key=lambda x: (-x[0], x[1], x[2].name, x[3]))
+    usados = set()
+    match = {}
+    for score, i, pdf_path, idx, texto in candidatos:
+        chave = (str(pdf_path), idx)
+        if i in match or chave in usados:
+            continue
+        match[i] = (score, pdf_path, idx, texto)
+        usados.add(chave)
+
+    for i, nome in enumerate(nomes_originais):
+        if i in match:
+            continue
+        melhor = None
+        melhor_score = 0.0
+        for pdf_path, idx, texto in paginas:
+            score = score_nome_em_texto(nome, texto)
+            if score > melhor_score:
+                melhor = (score, pdf_path, idx, texto)
+                melhor_score = score
+        if melhor and melhor_score > 0:
+            match[i] = melhor
+
+    for i, nome in enumerate(nomes_originais):
+        if i not in match:
+            continue
+        score, pdf_path, idx, _ = match[i]
+        if score <= 0:
+            continue
+
+        try:
+            with pdf_path.open("rb") as f:
+                reader = PdfReader(f)
+                writer = PdfWriter()
+                writer.add_page(reader.pages[idx - 1])
+            nome_saida = secure_filename(nome) or uuid.uuid4().hex
+            destino = caminho_unico(pasta_saida / f"{nome_saida}.pdf")
+            with destino.open("wb") as out_file:
+                writer.write(out_file)
+            extraidos.append(destino.name)
+            encontrados.add(nome)
+        except Exception as exc:
+            erros.append(f"{pdf_path.name} - pagina {idx}: {exc}")
+
+    faltantes = [nome for nome in nomes_originais if nome not in encontrados]
+    return {
+        "total_nomes": len(nomes_originais),
+        "encontrados": sorted(encontrados),
+        "faltantes": faltantes,
+        "extraidos": extraidos,
+        "erros": erros,
+    }
+
+
 def extrair_colaboradores(texto: str) -> list[dict]:
     linhas = texto.splitlines()
     encontrados = []
@@ -511,6 +623,164 @@ def extrair_texto_pdf_com_fallback(pdf_bytes: bytes) -> tuple[str, str]:
     return texto_fallback, "pymupdf"
 
 
+def extrair_colaboradores_da_folha(pdf_bytes: bytes) -> tuple[list[dict], str]:
+    texto, origem_extracao = extrair_texto_pdf_com_fallback(pdf_bytes)
+    todos = extrair_colaboradores(texto)
+
+    # Se o texto vier quebrado no primeiro leitor, tenta novamente com PyMuPDF.
+    if not todos and origem_extracao == "pypdf2" and fitz is not None:
+        try:
+            doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+            texto_fitz = "\n".join(pagina.get_text("text") for pagina in doc)
+            doc.close()
+            todos = extrair_colaboradores(texto_fitz)
+            if todos:
+                origem_extracao = "pymupdf"
+        except Exception:
+            pass
+
+    unicos = []
+    vistos = set()
+    for item in todos:
+        nome = re.sub(r"\s+", " ", item.get("nome", "")).strip()
+        if not nome:
+            continue
+        chave = " ".join(tokens_nome(nome))
+        if not chave or chave in vistos:
+            continue
+        vistos.add(chave)
+        unicos.append(
+            {
+                "matricula": item.get("matricula", ""),
+                "nome": nome,
+                "funcao": item.get("funcao", ""),
+                "cbo": item.get("cbo", ""),
+                "situacao": item.get("situacao", ""),
+                "demitido": bool(item.get("demitido", False)),
+            }
+        )
+
+    return unicos, origem_extracao
+
+
+def extrair_nomes_da_folha(pdf_bytes: bytes) -> tuple[list[str], str]:
+    colaboradores, origem_extracao = extrair_colaboradores_da_folha(pdf_bytes)
+    nomes = [c["nome"] for c in colaboradores if c.get("nome")]
+    return nomes, origem_extracao
+
+
+def comparar_rescindidos_entre_competencias(rescindidos_anterior: list[str], nomes_atual: list[str]) -> dict:
+    resultados = []
+    nao_aparecem = []
+    aparecem = []
+
+    for nome_rescindido in rescindidos_anterior:
+        melhor_nome = ""
+        melhor_score = 0.0
+
+        for nome_atual in nomes_atual:
+            score = score_nome(nome_rescindido, nome_atual)
+            if score > melhor_score:
+                melhor_nome = nome_atual
+                melhor_score = score
+
+        if melhor_score >= 78.0:
+            status = "APARECE NA PROXIMA"
+            observacao = "Foi localizado na competencia atual"
+            aparecem.append(nome_rescindido)
+        else:
+            status = "NAO APARECE NA PROXIMA"
+            observacao = "Nao localizado na competencia atual"
+            nao_aparecem.append(nome_rescindido)
+
+        resultados.append(
+            {
+                "nome_competencia_anterior": nome_rescindido,
+                "status": status,
+                "nome_correspondente_na_atual": melhor_nome,
+                "score": round(melhor_score, 2),
+                "observacao": observacao,
+            }
+        )
+
+    return {
+        "total_rescindidos": len(rescindidos_anterior),
+        "aparecem_na_atual": len(aparecem),
+        "nao_aparecem_na_atual": len(nao_aparecem),
+        "rescindidos_lista": rescindidos_anterior,
+        "aparecem_lista": aparecem,
+        "nao_aparecem_lista": nao_aparecem,
+        "resultados": resultados,
+    }
+
+
+def comparar_presenca_entre_competencias(
+    ativos_anterior: list[str],
+    nomes_atual: list[str],
+    rescindidos_anterior: list[str],
+) -> dict:
+    candidatos = []
+
+    for idx_anterior, nome_anterior in enumerate(ativos_anterior):
+        for idx_atual, nome_atual in enumerate(nomes_atual):
+            score = score_nome(nome_anterior, nome_atual)
+            if score > 0:
+                candidatos.append((score, idx_anterior, idx_atual))
+
+    candidatos.sort(key=lambda x: (-x[0], x[1], x[2]))
+
+    match_anterior = {}
+    match_atual = {}
+
+    for score, idx_anterior, idx_atual in candidatos:
+        if score < 78.0:
+            continue
+        if idx_anterior in match_anterior or idx_atual in match_atual:
+            continue
+        match_anterior[idx_anterior] = (idx_atual, score)
+        match_atual[idx_atual] = (idx_anterior, score)
+
+    ausentes = []
+    presentes = []
+    detalhes = []
+
+    for idx, nome in enumerate(ativos_anterior):
+        if idx in match_anterior:
+            idx_atual, score = match_anterior[idx]
+            detalhes.append(
+                {
+                    "nome_competencia_anterior": nome,
+                    "status": "APARECE NA PROXIMA" if score >= 88.0 else "APARECE - CONFERIR",
+                    "nome_correspondente_na_atual": nomes_atual[idx_atual],
+                    "score": round(score, 2),
+                    "observacao": "Encontrado na competencia atual" if score >= 88.0 else "Correspondencia aproximada",
+                }
+            )
+            presentes.append(nome)
+        else:
+            detalhes.append(
+                {
+                    "nome_competencia_anterior": nome,
+                    "status": "NAO APARECE NA PROXIMA",
+                    "nome_correspondente_na_atual": "",
+                    "score": 0.0,
+                    "observacao": "Nao localizado na competencia atual",
+                }
+            )
+            ausentes.append(nome)
+
+    return {
+        "total_ativos_anterior": len(ativos_anterior),
+        "total_atual": len(nomes_atual),
+        "total_rescindidos": len(rescindidos_anterior),
+        "presentes_na_atual": len(presentes),
+        "nao_aparecem_na_atual": len(ausentes),
+        "rescindidos_lista": rescindidos_anterior,
+        "nao_aparecem_lista": ausentes,
+        "resultados": detalhes,
+    }
+
+
 @app.get("/")
 def index():
     return render_template("index.html", active_tab=request.args.get("tab", "unificar"), similaridade=MIN_SIMILARIDADE_PADRAO)
@@ -575,16 +845,78 @@ def extrair_nomes():
     )
 
 
+@app.post("/separar-cartao-ponto")
+def separar_cartao_ponto():
+    nomes_input = request.form.get("nomes", "")
+    nomes = ler_nomes_lista(nomes_input)
+
+    job_id = uuid.uuid4().hex
+    pasta_job = WORK_DIR / job_id
+    pasta_upload = pasta_job / "entrada"
+
+    if pasta_job.exists():
+        shutil.rmtree(pasta_job)
+
+    arquivos = salvar_uploads(request.files.getlist("cartao_ponto_pdf"), pasta_upload)
+
+    if not arquivos:
+        return render_template(
+            "index.html",
+            active_tab="cartao-ponto",
+            erro_cartao_ponto="Envie ao menos um PDF do cartao ponto.",
+            nomes_cartao_ponto_input=nomes_input,
+        )
+    if not nomes:
+        return render_template(
+            "index.html",
+            active_tab="cartao-ponto",
+            erro_cartao_ponto="Informe ao menos um nome para separar o cartao ponto.",
+            nomes_cartao_ponto_input=nomes_input,
+        )
+
+    pasta_saida = pasta_job / "cartao_ponto"
+    resultado = extrair_paginas_por_nomes_texto(arquivos, nomes, pasta_saida)
+    zip_path = pasta_job / "cartao_ponto_separado.zip"
+    zipar_pasta(pasta_saida, zip_path)
+
+    resultado_cartao_ponto = {
+        "total": len(nomes),
+        "separados": len(resultado["extraidos"]),
+        "faltantes": len(resultado["faltantes"]),
+        "faltantes_nomes": resultado["faltantes"],
+        "erros": len(resultado["erros"]),
+    }
+
+    return render_template(
+        "index.html",
+        active_tab="cartao-ponto",
+        resultado_cartao_ponto=resultado_cartao_ponto,
+        job_id_cartao_ponto=job_id,
+        tem_zip_cartao_ponto=zip_path.exists() and zip_path.stat().st_size > 0,
+        nomes_cartao_ponto_input=nomes_input,
+    )
+
+
 @app.post("/separar-folha")
 def separar_folha():
     arquivo = request.files.get("folha_pdf")
     modo = request.form.get("mode", "nomes-cbo")
 
-    if not arquivo or not arquivo.filename.lower().endswith(".pdf"):
+    job_id = uuid.uuid4().hex
+    pasta_job = WORK_DIR / job_id
+    pasta_upload = pasta_job / "entrada"
+
+    if pasta_job.exists():
+        shutil.rmtree(pasta_job)
+
+    arquivos = salvar_uploads([arquivo] if arquivo else [], pasta_upload)
+    if not arquivos:
         return render_template("index.html", active_tab="folha", erro_folha="Selecione um PDF da folha.", mode_folha=modo)
 
+    pdf_path = arquivos[0]
+
     try:
-        pdf_bytes = arquivo.read()
+        pdf_bytes = pdf_path.read_bytes()
         texto, origem_extracao = extrair_texto_pdf_com_fallback(pdf_bytes)
     except RuntimeError as exc:
         return render_template("index.html", active_tab="folha", erro_folha=str(exc), mode_folha=modo)
@@ -639,12 +971,104 @@ def separar_folha():
     )
 
 
+@app.post("/comparar-competencias")
+def comparar_competencias():
+    arquivo_anterior = request.files.get("competencia_anterior")
+    arquivo_atual = request.files.get("competencia_atual")
+
+    job_id = uuid.uuid4().hex
+    pasta_job = WORK_DIR / job_id
+    pasta_upload = pasta_job / "entrada"
+
+    if pasta_job.exists():
+        shutil.rmtree(pasta_job)
+
+    if not arquivo_anterior or not arquivo_anterior.filename:
+        return render_template(
+            "index.html",
+            active_tab="comparar-competencias",
+            erro_comparacao="Selecione o PDF da competencia anterior.",
+        )
+
+    if not arquivo_atual or not arquivo_atual.filename:
+        return render_template(
+            "index.html",
+            active_tab="comparar-competencias",
+            erro_comparacao="Selecione o PDF da competencia atual.",
+        )
+
+    arquivos = salvar_uploads([arquivo_anterior, arquivo_atual], pasta_upload)
+    if len(arquivos) < 2:
+        return render_template(
+            "index.html",
+            active_tab="comparar-competencias",
+            erro_comparacao="Envie os dois PDFs para comparar.",
+        )
+
+    try:
+        anterior_bytes = arquivos[0].read_bytes()
+        atual_bytes = arquivos[1].read_bytes()
+        colaboradores_anterior, origem_anterior = extrair_colaboradores_da_folha(anterior_bytes)
+        colaboradores_atual, origem_atual = extrair_colaboradores_da_folha(atual_bytes)
+    except RuntimeError as exc:
+        return render_template(
+            "index.html",
+            active_tab="comparar-competencias",
+            erro_comparacao=str(exc),
+        )
+    except Exception:
+        return render_template(
+            "index.html",
+            active_tab="comparar-competencias",
+            erro_comparacao="Falha ao ler os PDFs enviados.",
+        )
+
+    nomes_anterior = [c["nome"] for c in colaboradores_anterior if c.get("nome")]
+    nomes_atual = [c["nome"] for c in colaboradores_atual if c.get("nome")]
+    rescindidos_anterior = [c["nome"] for c in colaboradores_anterior if c.get("demitido")]
+    ativos_anterior = [c["nome"] for c in colaboradores_anterior if c.get("nome") and not c.get("demitido")]
+
+    if not nomes_anterior:
+        return render_template(
+            "index.html",
+            active_tab="comparar-competencias",
+            erro_comparacao="Nenhum colaborador localizado na competencia anterior.",
+            origem_extracao_anterior=origem_anterior,
+            origem_extracao_atual=origem_atual,
+        )
+
+    if not nomes_atual:
+        return render_template(
+            "index.html",
+            active_tab="comparar-competencias",
+            erro_comparacao="Nenhum colaborador localizado na competencia atual.",
+            origem_extracao_anterior=origem_anterior,
+            origem_extracao_atual=origem_atual,
+        )
+
+    resultado_comparacao = comparar_presenca_entre_competencias(
+        ativos_anterior=ativos_anterior,
+        nomes_atual=nomes_atual,
+        rescindidos_anterior=rescindidos_anterior,
+    )
+
+    return render_template(
+        "index.html",
+        active_tab="comparar-competencias",
+        resultado_comparacao=resultado_comparacao,
+        job_id_comparacao=job_id,
+        origem_extracao_anterior=origem_anterior,
+        origem_extracao_atual=origem_atual,
+    )
+
+
 @app.get("/download/<job_id>/<tipo>")
 def download(job_id: str, tipo: str):
     pasta = WORK_DIR / secure_filename(job_id)
     mapa = {
         "unificados": pasta / "documentos_unificados.zip",
         "extraidos": pasta / "paginas_extraidas.zip",
+        "cartao-ponto": pasta / "cartao_ponto_separado.zip",
     }
     caminho = mapa.get(tipo)
     if not caminho or not caminho.exists():
@@ -654,4 +1078,4 @@ def download(job_id: str, tipo: str):
 
 if __name__ == "__main__":
     WORK_DIR.mkdir(parents=True, exist_ok=True)
-    app.run(host="127.0.0.1", port=5000, debug=True)
+    app.run(host="127.0.0.1", port=5000, debug=False, use_reloader=False)

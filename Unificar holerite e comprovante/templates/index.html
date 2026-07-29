@@ -11,7 +11,9 @@
     <section class="tabs">
       <a class="tab {{ 'is-active' if active_tab == 'unificar' else '' }}" href="/?tab=unificar">Unificar holerite e comprovante</a>
       <a class="tab {{ 'is-active' if active_tab == 'extrair' else '' }}" href="/?tab=extrair">Extrair por nomes</a>
+      <a class="tab {{ 'is-active' if active_tab == 'cartao-ponto' else '' }}" href="/?tab=cartao-ponto">Separar cartao ponto</a>
       <a class="tab {{ 'is-active' if active_tab == 'folha' else '' }}" href="/?tab=folha">Separar folha de pagamento</a>
+      <a class="tab {{ 'is-active' if active_tab == 'comparar-competencias' else '' }}" href="/?tab=comparar-competencias">Comparar competências</a>
     </section>
 
     {% if active_tab == 'unificar' %}
@@ -205,6 +207,72 @@
       </section>
     {% endif %}
 
+    {% if active_tab == 'cartao-ponto' %}
+      <section class="panel">
+        <div class="header">
+          <div>
+            <p class="eyebrow">Separacao de PDFs</p>
+            <h1>Separar cartao ponto</h1>
+            <p class="subtitle">Envie o PDF, informe os nomes e baixe apenas as paginas separadas em ZIP.</p>
+          </div>
+          {% if tem_zip_cartao_ponto %}
+            <a class="download" href="{{ url_for('download', job_id=job_id_cartao_ponto, tipo='cartao-ponto') }}">Baixar ZIP</a>
+          {% endif %}
+        </div>
+
+        <form class="upload-box" action="{{ url_for('separar_cartao_ponto') }}" method="post" enctype="multipart/form-data">
+          <label class="drop-area">
+            <span class="drop-title">Upload de PDF</span>
+            <span class="drop-copy">Selecione um ou mais PDFs do cartao ponto para separar as paginas correspondentes.</span>
+            <span class="file-status">Nenhum arquivo selecionado</span>
+            <input type="file" name="cartao_ponto_pdf" accept="application/pdf,.pdf" multiple required>
+          </label>
+
+          <label class="field-label">Nomes para separar, um por linha
+            <textarea name="nomes" rows="10" placeholder="MARIA SILVA&#10;JOAO SOUZA">{{ nomes_cartao_ponto_input or '' }}</textarea>
+          </label>
+
+          <div class="form-row">
+            <button type="submit">Separar documentos</button>
+          </div>
+        </form>
+
+        {% if erro_cartao_ponto %}<p class="alert">{{ erro_cartao_ponto }}</p>{% endif %}
+
+        {% if resultado_cartao_ponto %}
+          <section class="summary">
+            <div class="metric">
+              <span>{{ resultado_cartao_ponto.total }}</span>
+              <p>nomes informados</p>
+            </div>
+            <div class="metric">
+              <span>{{ resultado_cartao_ponto.separados }}</span>
+              <p>paginas separadas</p>
+            </div>
+            <div class="metric warning">
+              <span>{{ resultado_cartao_ponto.faltantes }}</span>
+              <p>nao localizados</p>
+            </div>
+            <div class="metric">
+              <span>{{ resultado_cartao_ponto.erros }}</span>
+              <p>erros de leitura</p>
+            </div>
+          </section>
+
+          {% if resultado_cartao_ponto.faltantes_nomes %}
+            <section class="table-wrap no-min-width">
+              <h2>Nomes nao localizados</h2>
+              <ul>
+                {% for nome in resultado_cartao_ponto.faltantes_nomes %}
+                  <li>{{ nome }}</li>
+                {% endfor %}
+              </ul>
+            </section>
+          {% endif %}
+        {% endif %}
+      </section>
+    {% endif %}
+
     {% if active_tab == 'folha' %}
       <section class="panel">
         <div class="header">
@@ -220,7 +288,7 @@
           </label>
 
           <label class="field-label">Opcao de extracao
-            <select name="mode">
+            <select name="mode" id="modo-folha">
               <option value="nomes-cbo" {{ 'selected' if (mode_folha or 'nomes-cbo') == 'nomes-cbo' else '' }}>1. Extrair nomes e CBO</option>
               <option value="separar-demitidos" {{ 'selected' if mode_folha == 'separar-demitidos' else '' }}>2. Separar colaboradores e deixar demitidos por ultimo</option>
             </select>
@@ -269,6 +337,132 @@
         {% endif %}
       </section>
     {% endif %}
+
+    {% if active_tab == 'comparar-competencias' %}
+      <section class="panel">
+        <div class="header">
+          <div>
+            <p class="eyebrow">Comparação de folhas</p>
+            <h1>Comparar competências</h1>
+            <p class="subtitle">Envie a folha da competência anterior e a atual para comparar apenas os rescindidos e verificar quem não aparece na próxima competência.</p>
+          </div>
+        </div>
+
+        <form class="upload-box" action="{{ url_for('comparar_competencias') }}" method="post" enctype="multipart/form-data">
+          <div class="document-groups">
+            <section class="document-group">
+              <h2>Competência anterior</h2>
+              <label class="drop-area">
+                <span class="drop-title">Upload de PDF</span>
+                <span class="drop-copy">Selecione a folha da competência anterior.</span>
+                <span class="file-status">Nenhum arquivo selecionado</span>
+                <input type="file" name="competencia_anterior" accept="application/pdf,.pdf" required>
+              </label>
+            </section>
+
+            <section class="document-group">
+              <h2>Competência atual</h2>
+              <label class="drop-area">
+                <span class="drop-title">Upload de PDF</span>
+                <span class="drop-copy">Selecione a folha da competência atual.</span>
+                <span class="file-status">Nenhum arquivo selecionado</span>
+                <input type="file" name="competencia_atual" accept="application/pdf,.pdf" required>
+              </label>
+            </section>
+          </div>
+
+          <div class="form-row">
+            <button type="submit">Comparar competências</button>
+          </div>
+        </form>
+
+        {% if erro_comparacao %}<p class="alert">{{ erro_comparacao }}</p>{% endif %}
+
+        {% if origem_extracao_anterior or origem_extracao_atual %}
+          <p class="hint">
+            Método de leitura usado:
+            <strong>anterior = {{ origem_extracao_anterior or '-' }}</strong>
+            |
+            <strong>atual = {{ origem_extracao_atual or '-' }}</strong>
+          </p>
+        {% endif %}
+      </section>
+
+        {% if resultado_comparacao %}
+          <section class="summary">
+            <div class="metric">
+            <span>{{ resultado_comparacao.total_ativos_anterior }}</span>
+            <p>ativos na anterior</p>
+            </div>
+            <div class="metric">
+            <span>{{ resultado_comparacao.total_atual }}</span>
+            <p>nomes na atual</p>
+            </div>
+            <div class="metric">
+            <span>{{ resultado_comparacao.total_rescindidos }}</span>
+            <p>rescindidos identificados</p>
+            </div>
+            <div class="metric warning">
+            <span>{{ resultado_comparacao.nao_aparecem_na_atual }}</span>
+            <p>anterior sem próxima</p>
+            </div>
+          </section>
+
+          <section class="issues">
+          <article>
+            <h2>Rescindidos identificados na anterior</h2>
+            {% if resultado_comparacao.rescindidos_lista %}
+              <ul>
+                {% for item in resultado_comparacao.rescindidos_lista %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p>Nenhum rescindido foi identificado na competencia anterior.</p>
+            {% endif %}
+          </article>
+
+          <article>
+            <h2>Ativos da anterior que não aparecem na próxima</h2>
+            {% if resultado_comparacao.nao_aparecem_lista %}
+              <ul>
+                {% for item in resultado_comparacao.nao_aparecem_lista %}
+                  <li>{{ item }}</li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p>Todos os colaboradores ativos da anterior aparecem na próxima competência.</p>
+            {% endif %}
+          </article>
+        </section>
+
+        <section class="table-wrap">
+          <h2>Detalhes da comparação de ativos</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Nome anterior</th>
+                <th>Status</th>
+                <th>Correspondente atual</th>
+                <th>Score</th>
+                <th>Observação</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in resultado_comparacao.resultados %}
+                <tr>
+                  <td>{{ item.nome_competencia_anterior }}</td>
+                  <td>{{ item.status }}</td>
+                  <td>{{ item.nome_correspondente_na_atual or '-' }}</td>
+                  <td>{{ item.score }}</td>
+                  <td>{{ item.observacao }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </section>
+      {% endif %}
+    {% endif %}
   </main>
 
   <script>
@@ -289,6 +483,7 @@
         area.classList.toggle('has-files', input.files.length > 0);
       });
     });
+
   </script>
 </body>
 </html>
